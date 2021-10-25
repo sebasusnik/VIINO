@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/img/icon/wine.ico">
+    <title>VIINO</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@100;200;300;400;500;600;700;800&family=Work+Sans:wght@100;200;400;500;600;700;800&display=swap" rel="stylesheet">    
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="main-header-top-bar">
+            <a class="burger"><img src="img/icon/burger.svg" alt="burger menu"></a>
+            <a class="lupe"><img src="img/icon/lupe.svg" alt=""></a>
+            <a href="/"class="logo">VIINO</a>
+            <a class="bag" href="/cart"><img src="img/icon/bag.svg" alt=""></a>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class=main-title-container>
+            <a value="Go back!" onclick="history.back()" class="back-arrow"><img src="img/icon/arrow.svg" alt=""></a>
+            <h1 class="main-title">TU COMPRA</h1>
+            
+            <!-- dejo este tag <a> vacio para que el main-title-container quede 
+                con TU COMPRA quede centrado-->
+            <a> </a>
+        </div>
+        
+        <form action="" method="POST">
+        <section class="cart">
+            
+            <div class="cart-product">
+                <img class="product-image" src="/img/cart-img/Pielihueso-Naranjo.jpg" alt="Vino Naranjo 2020 Pielihueso">
+                <div class="details">
+                    <h3>NARANJO 2020 PIELIHUESO</h3>
+                    <p class="price">$1700</p>
+                </div>
+                <div class = "little-buttons">
+                    <button class = "remove-x" type="button">X</button>
+                    <div class = "qty-box"> 
+                        <button class = "minusplus" type="button">-</button>
+                        <label for="qty1"></label>
+                        <input type="number" name="qty1" class = "qty" value="1" min = "0" max = "50">
+                        <button class = "minusplus" type="button">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-product">
+                <img class="product-image" src="/img/cart-img/A-Lisa.jpg" alt="Vino A Lisa 2019 Noemia">
+                <div class="details">
+                <h3>A LISA 2019 NOEMIA</h3>
+                <p class="price">$2500</p>
+                </div>
+                <div class = "little-buttons">
+                    <button class = "remove-x" type="button">X</button>
+                    <div class = "qty-box"> 
+                        <button class = "minusplus" type="button">-</button>
+                        <label for="qty2"></label>
+                        <input type="number" name="qty2" class = "qty" value="1" min = "0" max = "50">
+                        <button class = "minusplus" type="button">+</button>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="cart-product">
+                <img class="product-image" src="/img/cart-img/Vino-de-la-casa.jpg" alt="Vino Tinto de la Casa 2018 Riccitelli">
+                <div class="details">
+                    <h3>TINTO DE LA CASA 2018 RICCITELLI</h3>
+                    <p class="price">$2500</p>
+                </div>
+                <div class="little-buttons">
+                    <button class = "remove-x" type="button">X</button>
+                    <div class = "qty-box"> 
+                        <button class = "minusplus" type="button">-</button>
+                        <label for="qty3"></label>
+                        <input type="number" name="qty3" class = "qty" value="1" min = "0" max = "50">
+                        <button class = "minusplus" type="button">+</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <div class="big-buttons">
+            <button type="button" class = "white-button">SEGUIR COMPRANDO</button>
+            <button type="reset"  class = "white-button">VACIAR CARRITO</button>
+            <button type="submit" class = "black-button">SUBTOTAL $ 6700</button>
+        </div>
+        </form>
+    </main>
+
+    <footer class="footer" style="opacity: 1;">
+        <a href="/"><h2 class="footer-title">VIINO</h2></a>
+        <section class="footer-content">
+            <h3>NUESTRO LOCAL</h3>
+            <p>Av Forest 4444, Colegiales, Ciudad Autonoma de Buenos Aires, Argentina.</p>
+            
+            <h3>CONTACTO</h3>
+            <p>+549114444444</p>
+            <p>info@viino.com.ar</p>
+            
+            <h3>INFORMACION</h3>
+            <a href=""><p>FAQs</p></a>
+            <a href=""><p>Legales</p></a>
+            <a href=""><p>Política de privacidad</p></a>
+        </section>
+        <div class="social-networks">
+            <a href=""><img src="img/icon/facebook.svg" alt="Contacto facebook"></a>
+            <a href=""><img src="img/icon/youtube.svg" alt="Contacto youtube"></a>
+            <a href=""><img src="img/icon/instagram.svg" alt="Contacto instagram"></a>
+            <a href=""><img src="img/icon/whatsapp.svg" alt="Contacto whatsapp"></a>
+        </div>
+    </footer>
+</body>
+</html>
