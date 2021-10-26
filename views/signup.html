@@ -10,7 +10,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@100;200;300;400;500;600;700;800&family=Work+Sans:wght@100;200;400;500;600;700;800&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@100;200;300;400;500;600;700;800&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">    
 
 </head>
 
@@ -42,26 +42,18 @@
             <h1 class="main-title">TU CUENTA</h1>
         </div>
         <div class="login-signup-buttons">
-            <a href="/login">INICIA SESIÓN</a>
-            <p>REGISTRATE</p>
-        </div>  
-            <p>Creá una cuenta en VIINO y obtené el beneficio de una experiencia de compra más personal y de un pago on-line más veloz.</p><br>
-            <p class="completar">Completar todos los campos es obligatorio</p><br>
+            <a class="login button-white" href="/login">INICIA SESIÓN</a>
+            <p class="signup button-black">REGISTRATE</p>
+        </div>
+        <div class="form-container">
+            <p class="form-text">Creá una cuenta en VIINO y obtené el beneficio de una experiencia de compra más personal y de un pago on-line más veloz.</p>
+            <p class="form-subtext">Completar todos los campos es obligatorio</p>
             <form action="resultadosRegister" method="POST">
-                <div class="campoEncuenta">
-                    <label for="nombre">Nombre:</label>
-                    <input class="barra" type="text" name="nombre" id="nombre" placeholder="Nombre">
-                </div>
-                <div class="campoEncuenta">
-                    <input class="barra" type="text" name="apellido" id="apellido" placeholder="Apellido">
-                </div>
-                <div class="campoEncuenta">
-                    <input class="barra" type="email" name="email" id="email" placeholder="Correo electrónico">
-                </div>
-                <div class="campoEncuenta">
-                    <input class="barra" type="password" name="password" id="password" placeholder="Contraseña">
-                </div>
-                <button type="submit" value="enviar">CREAR CUENTA</button><br><br><br>
+                <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre...">
+                <input class="input" type="text" name="apellido" id="apellido" placeholder="Apellido...">
+                <input class="input" type="email" name="email" id="email" placeholder="Correo electrónico...">
+                <input class="input" type="password" name="password" id="password" placeholder="Contraseña...">
+                <button class="black-button" type="submit" value="enviar">CREAR CUENTA</button>
             </form>
         </div>
     </main>
