@@ -3,6 +3,7 @@ const app = express();
 
 const path = require('path')
 
+app.use(express.urlencoded());
 
 app.get('/', (req, res) => {res.sendFile(path.join(__dirname, 'views/index.html'))});
 app.get('/shop', (req, res) => {res.sendFile(path.join(__dirname, 'views/shop.html'))});
@@ -15,4 +16,4 @@ app.get('/login', (req, res) => {res.sendFile(path.join(__dirname, 'views/login.
 app.use(express.static('public'));
 
 
-app.listen(3060, () => console.log('Servidor corriendo'));
+app.listen(process.env.PORT || 3000, () => console.log('Servidor corriendo'));

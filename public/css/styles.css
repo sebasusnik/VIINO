@@ -185,7 +185,7 @@ nav{
 
 .payment-title, .deliver-title {
     font-family: 'Work Sans', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
     letter-spacing: .5em;
     margin: 22px 0px;
@@ -488,6 +488,7 @@ svg:hover path {
 .price-quantity-box {
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
     margin-bottom: 22px;
 }
 
@@ -529,6 +530,7 @@ svg:hover path {
     height: 50px;
     width: 100%;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 
@@ -699,7 +701,7 @@ footer a {
     height: 50px;
     border: solid 1px black;
     display: flex;
-    margin: 0px 6.8%;
+    margin: 0px 6.8% 50px;
     font-family: 'Work Sans', sans-serif;
     font-size: 14px;
     letter-spacing: .25em;
@@ -769,6 +771,7 @@ footer a {
     scroll-snap-type: x mandatory;
     height: 150px;
     border: solid rgba(0, 0, 0, 10%) 1px;
+    margin-bottom: 2%;
 }
 
 .cart-product-container {
@@ -780,6 +783,7 @@ footer a {
 }
 
 .cart-product-image {
+    margin-left: -10px;
     height: -webkit-fill-available;
 }
 
@@ -788,41 +792,41 @@ footer a {
 .cart-product-title {
     font-family: 'Times New Roman', Times, serif;
     font-weight: 200;
-    font-size: 18px;
+    font-size: 22px;
     position: absolute;
     top: 16px;
-    left: 124px;
+    left: 108px;
 }
 
 .cart-product-producer {
     font-style: normal;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 20px;
     margin: 14px 0px 16px;
     position: absolute;
-    bottom: 50px;
-    left: 124px;
+    bottom: 54px;
+    left: 108px;
 }
 
 .cart-product-price {
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 200;
     margin-top: 6px;
     position: absolute;
     bottom: 14px;
-    left: 124px;
+    left: 108px;
 }
 
 .cart-product-counter {
     display: flex;
     justify-content: space-between;
-    width: 80px;
+    width: 100px;
     height: 42px;
     border: solid black 1px;
     position: absolute;
     bottom: 10px;
-    right: 0px;
+    right: 12px;
 }
 
 .cart-product-counter > * {
@@ -838,7 +842,29 @@ footer a {
 }
 
 .cart-product-delete {
+    display: none;
+    position: absolute;
+    right: 30px;
+    height: 148px;
     background-color: black;
     scroll-snap-align: start;
-    width: 40px;
+    width: 116px;
+    padding-top: 62px;
+    text-align: center;
 }
+
+.big-buttons {
+    margin-top: 60px;
+}
+
+.white-button {
+    margin-bottom: 30px;
+    background-color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    letter-spacing: .3em;
+    text-align: center;
+    border: solid 1px black;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;

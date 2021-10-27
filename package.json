@@ -4,7 +4,8 @@
   "description": "En este repositorio se trabajará el Proyecto Integrador del Grupo 1",
   "main": "servidor.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js",
+    "startDev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,9 @@
   },
   "homepage": "https://github.com/SantiagoJurczyszyn/Grupo_1_Vino#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "method-override": "^3.0.0",
     "nodemon": "^2.0.13",
     "normalize.css": "^8.0.1"
   }
