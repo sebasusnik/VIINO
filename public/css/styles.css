@@ -23,6 +23,13 @@ button:focus {
     -webkit-tap-highlight-color: transparent;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
 
 a {
     text-decoration: none;
@@ -36,14 +43,14 @@ input {
 
 input[type=text]{
     font-family: 'Work Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 14px;
     letter-spacing: .1em;   
 }
 
 input[type=email]{
     font-family: 'Work Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 14px;
     letter-spacing: .1em;   
 }
@@ -92,7 +99,7 @@ input::placeholder {
 
 .logo {
     font-family: 'Times New Roman', serif;
-    font-size: 40px;
+    font-size: 42px;
     color: white;
     position: absolute;
     margin-left: auto;
@@ -102,7 +109,7 @@ input::placeholder {
     width: 120px;
     text-align: center;
     cursor: pointer;
-    top: 3px;
+    top: 1px;
 }
 
 .bag {
@@ -133,7 +140,7 @@ nav{
 /* ABOUT US */
 
 .about-us {
-    margin: 60px 6.8% 160px;
+    margin: 60px 6.8% 120px;
 }
 
 .about-us-title {
@@ -141,14 +148,14 @@ nav{
     font-size: 36px;
     font-weight: 300;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 }
 
 .about-us-subtitle {
     text-align: center;
     font-size: 14px;
     font-weight: 400;
-    margin-bottom: 26px;
+    margin-bottom: 40px;
 }
 
 .about-us-text {
@@ -305,7 +312,7 @@ svg:hover path {
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 6%;
+    margin: 32px 6%;
 }
 
 .product {
@@ -314,7 +321,7 @@ svg:hover path {
     flex-direction: column;
     justify-content: space-evenly;
     border: solid rgba(0, 0, 0, 10%) 1px;
-    margin: 10px 1%;
+    margin: 1%;
     width: 150px;
     flex-grow: 1;
     height: 320px;
@@ -331,7 +338,7 @@ svg:hover path {
     font-family: 'Times New Roman', serif;
     font-weight: 200;
     font-size: 16px;
-    max-width: 150px;
+    width: 100%;
 }
 
 .price {
@@ -529,10 +536,10 @@ svg:hover path {
 
 .carrousel-title {
     font-family: 'Work Sans', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
     letter-spacing: .3em;
-    margin-top: 44px;
+    margin-top: 60px;
     margin-bottom: 20px;
 }
 
@@ -574,12 +581,12 @@ svg:hover path {
 
 .newsletter {
     position:relative;
-    margin: 60px 6.8% 60px;
+    margin: 100px 6.8% 120px;
 }
 
 .newsletter-title {
     font-family: 'Work Sans', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
     letter-spacing: .5em;
     margin: 22px 0px;
@@ -587,7 +594,7 @@ svg:hover path {
 
 .newsletter-text {
     font-size: 14px;
-    font-weight: 200;
+    font-weight: 300;
     margin: 18px 0px;
 }
 
@@ -640,7 +647,7 @@ footer {
     position: relative;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 52px;
+    font-size: 62px;
     margin: auto;
     margin-top: 30%;
     margin-bottom: 38%;
@@ -686,7 +693,7 @@ footer a {
     color: rgba(255, 255, 255, 60%);
 }
 
-/* LOGIN */
+/* FORMULARIOS */
 
 .login-signup-buttons {
     height: 50px;
@@ -750,3 +757,88 @@ footer a {
 }
 
 
+/* CART */
+
+.cart {
+    margin: 0 6.8% 100px;
+}
+
+.cart-product {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    height: 150px;
+    border: solid rgba(0, 0, 0, 10%) 1px;
+}
+
+.cart-product-container {
+    padding: 10px 0;
+    position: relative;
+    width: 100vh;
+    scroll-snap-align: start;
+
+}
+
+.cart-product-image {
+    height: -webkit-fill-available;
+}
+
+
+
+.cart-product-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    font-size: 18px;
+    position: absolute;
+    top: 16px;
+    left: 124px;
+}
+
+.cart-product-producer {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    margin: 14px 0px 16px;
+    position: absolute;
+    bottom: 50px;
+    left: 124px;
+}
+
+.cart-product-price {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 6px;
+    position: absolute;
+    bottom: 14px;
+    left: 124px;
+}
+
+.cart-product-counter {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    height: 42px;
+    border: solid black 1px;
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+}
+
+.cart-product-counter > * {
+    align-self: center;
+}
+
+.cart-product-counter button {
+    all: unset;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.cart-product-delete {
+    background-color: black;
+    scroll-snap-align: start;
+    width: 40px;
+}
