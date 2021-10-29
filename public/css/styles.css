@@ -756,7 +756,7 @@ footer a {
 .button-black{
     background-color: black;
     color: white;
-    border: solid 1px black;
+    height: 100%;
 }
 
 .form-container{
@@ -1044,15 +1044,27 @@ footer a {
         height: 60px;
     }
 
+    .lupe img {
+        width: 20px;
+    }
+
     .lupe {
         position: absolute;
         left: 0px;
-        top: 6px;
+        top: 4px;
+    }
+
+    .user img {
+        width: 22px;
     }
 
     .user {
         right: 60px;
         top: 6px;
+    }
+
+    .bag img {
+        width: 18px;
     }
 
     .bag {
