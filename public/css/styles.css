@@ -36,6 +36,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active{
     -webkit-box-shadow: 0 0 0 30px white inset;
+    box-shadow: 0 0 0 30px white inset;
 }
 
 
@@ -665,6 +666,7 @@ svg:hover path {
 /* FOOTER */
 
 footer {
+    opacity: 1;
     position: relative;
     -webkit-transform: translate3d(0,0,1px);
     transform: translate3d(0,0,1px);
@@ -766,7 +768,7 @@ footer a {
 .form-text {
     font-size: 14px;
     font-weight: 300;
-    margin: 40px 0 20px;
+    margin-bottom: 28px;
 }
 
 .form-subtext {
@@ -783,6 +785,20 @@ footer a {
     display: block;
     padding-left: 22px;
     margin: 30px 0;
+}
+
+textarea {
+    min-height: 250px;
+    padding: 16px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.area::placeholder {
+    letter-spacing: .1em;
+    position: absolute;
+    top: 16px
 }
 
 .forgot-password {
@@ -905,7 +921,7 @@ footer a {
 @media (min-width: 700px) {
 
     .main-header-top-bar {
-        max-width: 830px;
+        max-width: 92vw;
         margin: auto;
     }
 
@@ -934,8 +950,8 @@ footer a {
     }
 
     .footer-title {
-        margin-top: 190px;
-        margin-bottom: 230px;
+        margin-top: 16vh;
+        margin-bottom: 20vh;
         font-size: 72px;
     }
 
@@ -1039,7 +1055,7 @@ footer a {
 @media (min-width: 1200px) {
 
     .main-header-top-bar {
-        max-width: 980px;
+        max-width: 78vw;
         margin: auto;
         height: 60px;
     }
@@ -1069,6 +1085,7 @@ footer a {
 
     .bag {
         top: 6px;
+        right: 0px;
     }
 
     .logo {
@@ -1109,8 +1126,8 @@ footer a {
     }
 
     .footer-title {
-        margin-top: 200px;
-        margin-bottom: 230px;
+        margin-top: 16vh;
+        margin-bottom: 20vh;
         font-size: 78px;
     }
 

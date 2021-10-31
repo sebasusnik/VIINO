@@ -2,10 +2,10 @@
   "name": "grupo_1_vino",
   "version": "1.0.0",
   "description": "En este repositorio se trabajará el Proyecto Integrador del Grupo 1",
-  "main": "app.js",
+  "main": "./src/app.js",
   "scripts": {
-    "start": "node app.js",
-    "startDev": "nodemon app.js"
+    "start": "node ./src/app.js",
+    "startDev": "nodemon ./src/app.js"
   },
   "repository": {
     "type": "git",

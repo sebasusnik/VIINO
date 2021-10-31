@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/img/icon/wine.ico">
+    <title>VIINO</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@100;200;300;400;500;600;700;800&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">    
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="main-header-top-bar">
+            <a class="burger"><img src="/img/icon/burger.svg" alt="burger menu"></a>
+            <a class="lupe"><img src="/img/icon/lupe.svg" alt=""></a>
+            <a href="/"class="logo">VIINO</a>
+            <a class="user" href="/user/login"><img src="/img/icon/user.svg" alt=""></a>
+            <a class="bag" href="/cart"><img src="/img/icon/bag.svg" alt=""></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">NOSOTROS</a></li>
+                <li><a href="">FAVORITOS</a></li>
+                <li><a href="">SHOP</a></li>
+                <li><a href="">TINTOS</a></li>
+                <li><a href="">BLANCOS</a></li>
+                <li><a href="">BODEGAS</a></li>
+                <li><a href="">OTROS</a></li>
+                <li><a href="">NOVEDADES</a></li>
+                <li><a href="">SELECCION</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main-title-container">
+            <a value="Go back!" onclick="history.back()" class="back-arrow"><img src="/img/icon/arrow.svg" alt=""></a>
+            <h1 class="main-title">CREAR PRODUCTO</h1>
+        </div>
+        <div class="form-container">
+            <br>
+            <p class="form-text">Creá una nuevo producto completando el formulario:</p>
+            <form action="resultadosRegister" method="POST">
+                <p class="form-subtext">DATOS PRINCIPALES</p>
+                <input class="input" type="text" name="productName" id="productName" placeholder="Nombre del vino/producto..." required>
+                <input class="input" type="text" name="producer" id="producer" placeholder="Bodega...">
+                <input class="input" type="text" name="year" id="year" placeholder="Año de la cosecha...">
+                <input class="input" type="text" name="varietal" id="varietal" placeholder="Varietal...">
+                <input class="input" type="text" name="price" id="price" placeholder="Precio..." required>
+                <textarea class="input area"name="description" id="description" cols="30" rows="10" placeholder="Descripción..." required></textarea></textarea>
+                <p class="form-subtext">FICHA TÉCNICA</p>
+                <input class="input" type="text" name="location" id="location" placeholder="Locación del viñedo...">
+                <input class="input" type="text" name="altitude" id="altitude" placeholder="Altitud...">
+                <input class="input" type="text" name="winemakers" id="winemakers" placeholder="Enólogos...">
+                <input class="input" type="text" name="varietalComp" id="varietalComp" placeholder="Composiciòn varietal...">
+                <input class="input" type="text" name="soil" id="soilComposition" placeholder="Composición del suelo...">
+                <input class="input" type="text" name="avb" id="avb" placeholder="Graduación alcohólica...">
+                <input class="input" type="text" name="breeding" id="breeding" placeholder="Crianza...">
+                <button class="black-button" type="submit" value="enviar">CREAR PRODUCTO</button>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <a href="/"><h2 class="footer-title">VIINO</h2></a>
+        <section class="footer-content">
+            <h3>NUESTRO LOCAL</h3>
+            <p>Av Forest 4444, Colegiales, Ciudad Autonoma de Buenos Aires, Argentina.</p>
+            
+            <h3>CONTACTO</h3>
+            <p>+549114444444</p>
+            <p>info@viino.com.ar</p>
+            
+            <h3>INFORMACION</h3>
+            <a href=""><p>FAQs</p></a>
+            <a href=""><p>Legales</p></a>
+            <a href=""><p>Política de privacidad</p></a>
+        </section>
+        <div class="social-media">
+            <a href=""><img src="/img/icon/facebook.svg" alt="Contacto facebook"></a>
+            <a href=""><img src="/img/icon/youtube.svg" alt="Contacto youtube"></a>
+            <a href=""><img src="/img/icon/instagram.svg" alt="Contacto instagram"></a>
+            <a href=""><img src="/img/icon/whatsapp.svg" alt="Contacto whatsapp"></a>
+        </div>
+    </footer>
+</body>
+</html>
