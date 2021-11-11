@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head',{ subtitle: product.name , styleSheetName:'styles' }) %>
+
+<body>
+    <%- include('../partials/header')%>
+    <main class="main">
+
+        <div class="main-title-container">
+            <a value="Go back!" onclick="history.back()" class="back-arrow"><img src="/img/icon/arrow.svg" alt=""></a>
+            <h1 class="main-title">VOLVER</h1>
+            <a href="" class="favourite">
+                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path clas="fav-heart"d="M7.56137 2.72238L7.99999 3.52397L8.43862 2.7224C8.68343 2.27503 9.09122 1.67638 9.69004 1.21327L9.38416 0.81775L9.69004 1.21327C10.3061 0.736799 10.9951 0.5 11.75 0.5C13.8593 0.5 15.5 2.21889 15.5 4.60981C15.5 5.8756 14.9987 6.96181 14.044 8.11387C13.0766 9.28122 11.6825 10.4713 9.94579 11.9514L9.94578 11.9514L9.94553 11.9516C9.35949 12.451 8.69308 13.019 8 13.6251L7.99997 13.6251L8.00027 13.6253L8.00002 13.6251C8.00001 13.625 8.00001 13.625 8 13.625C7.99999 13.625 7.99999 13.625 7.99998 13.625C7.30742 13.0194 6.6414 12.4518 6.05598 11.9529L6.0546 11.9517L6.05459 11.9517C4.31765 10.4715 2.92353 9.2813 1.95606 8.11391C1.00127 6.96181 0.5 5.87559 0.5 4.60981C0.5 2.21889 2.14075 0.5 4.25 0.5C5.00495 0.5 5.69387 0.736799 6.30996 1.21327L6.61584 0.81775L6.30996 1.21327C6.90878 1.67639 7.31657 2.27501 7.56137 2.72238Z" fill="white" stroke="black"/>
+                </svg>
+            </a>
+        </div>
+
+        <section class="product-detail">
+            <figure class="product-detail-image-container">
+                <img class="product-detail-image" src="/img/product-img/<%= product.image %>" alt="<%= product.name %>">
+            </figure>
+
+            <div class="product-id">
+                <h3 class="detail-producer"><%= product.producer %></h3>
+                <div class="line"></div>
+                <h2 class="product-detail-title"><%= product.name %></h2>
+                <p class="product-detail-text"><%= product.description %></p>
+                <!-- SACO ESTO POR AHORA QUE NO ESTA EN EL JSON <snap class="product-detail-quote">- Bodega Pielihueso</snap> -->
+            </div>
+            <div class="purchase-container">
+                <div class="price-quantity-box">
+                    <p class="product-price">$ <%= product.price %></p>
+                    <div class="product-counter">
+                        <button class="less">-</button>
+                        <p class="actual-quantity">1</p>
+                        <button class="more">+</button>
+                    </div>
+                </div>
+                <button class="black-button">AGREGAR A MI COMPRA</button>
+            </div>
+            <div class="data-sheet">
+                <h3 class="data-sheet-title">FICHA TÉCNICA</h3>
+                <div class="data-sheet-content">
+                    <h4>Locación</h4>
+                    <p><%= product.location %></p>
+                    <h4>Altura</h4>
+                    <p><%= product.altitude %> msnm</p>
+                    <h4>Enólogos</h4>
+                    <p><%= product.winemakers %></p>
+                    <h4>Composición varietal</h4>
+                    <p><%= product.varietalComp %></p>
+                    <h4>Composición del suelo</h4>
+                    <p><%= product.soil %></p>
+                    <h4>Graduación alcoholica</h4>
+                    <p><%= product.avb %>º</p>
+                    <h4>Crianza</h4>
+                    <p><%= product.breeding %></p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="carrousel-recomendation">
+            <h2 class="carrousel-title">MÁS DE PIELIHUESO...</h2>
+            <div class="carrousel">
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Ver-Sacrum-La-Dama-del-Abrigo-Rojo.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">VER SACRUM NEBBIOLO 2018</h2>
+                    <p class="price">$8200</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Pielihueso-Naranjo.png" alt="Vino Pielihueso Naranjo 2020"></a>
+                    <h3 class="product-title">NARANJO 2020 PIELIHUESO</h2>
+                    <p class="price">$1700</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Rocamadre-Criolla.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">CRIOLLA 2021 ROCAMADRE</h2>
+                    <p class="price">$1700</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Noemia-A-Lisa.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">A LISA 2019 NOEMIA</h2>
+                    <p class="price">$2500</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Les-Astronautes-Criolla.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">CRIOLLA 2020 LES ASTRONAUTES</h2>
+                    <p class="price">$1375</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Riccitelli-Kung-Fu-Tinto.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">KUNG FU TINTO 2020 RICCITELLI</h2>
+                    <p class="price">$2500</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Rocamadre-Rosado.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">ROSADO 2020 ROCAMADRE</h2>
+                    <p class="price">$1375</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Riccitelli-Tinto-de-la-Casa.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">TINTO DE LA CASA 2018 RICCITELLI</h2>
+                    <p class="price">$2500</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Rocamadre-Pinot_noir-2019.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">PINOT NOIR 2020 ROCAMADRE</h2>
+                    <p class="price">$1800</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Les-Astronautes-Pino-Pinot.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">PINO PINOT 2019 LES ASTRONAUTES</h2>
+                    <p class="price">$1375</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Riccitelli-Kung-Fu-Pet-Nat.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">KUNG FU PET NAT 2020 RICCITELLI</h2>
+                    <p class="price">$2500</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Vallisto-Extremo-Criolla.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">VALLISTO EXTREMO 2018</h2>
+                    <p class="price">$1440</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="carrousel-recomendation">
+            <h2 class="carrousel-title">TAMBIÉN TE RECOMENDAMOS...</h2>
+            <div class="carrousel">
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Ver-Sacrum-La-Dama-del-Abrigo-Rojo.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">VER SACRUM NEBBIOLO 2018</h2>
+                    <p class="price">$8200</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Pielihueso-Naranjo.png" alt="Vino Pielihueso Naranjo 2020"></a>
+                    <h3 class="product-title">NARANJO 2020 PIELIHUESO</h2>
+                    <p class="price">$1700</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Rocamadre-Criolla.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">CRIOLLA 2021 ROCAMADRE</h2>
+                    <p class="price">$1700</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Noemia-A-Lisa.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">A LISA 2019 NOEMIA</h2>
+                    <p class="price">$2500</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Les-Astronautes-Criolla.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">CRIOLLA 2020 LES ASTRONAUTES</h2>
+                    <p class="price">$1375</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Riccitelli-Kung-Fu-Tinto.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">KUNG FU TINTO 2020 RICCITELLI</h2>
+                    <p class="price">$2500</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Rocamadre-Rosado.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">ROSADO 2020 ROCAMADRE</h2>
+                    <p class="price">$1375</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Riccitelli-Tinto-de-la-Casa.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">TINTO DE LA CASA 2018 RICCITELLI</h2>
+                    <p class="price">$2500</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Rocamadre-Pinot_noir-2019.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">PINOT NOIR 2020 ROCAMADRE</h2>
+                    <p class="price">$1800</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Les-Astronautes-Pino-Pinot.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">PINO PINOT 2019 LES ASTRONAUTES</h2>
+                    <p class="price">$1375</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Riccitelli-Kung-Fu-Pet-Nat.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">KUNG FU PET NAT 2020 RICCITELLI</h2>
+                    <p class="price">$2500</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+                <article class="carrousel-product">
+                    <a href="/product"><img class="product-image" src="/img/product-img/Vallisto-Extremo-Criolla.png" alt="Vino Malbec Primero 2019"></a>
+                    <h3 class="product-title">VALLISTO EXTREMO 2018</h2>
+                    <p class="price">$1440</p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+            </div>
+        </section>
+
+
+        <section class="newsletter">
+            <h2 class="newsletter-title">NOVEDADES</h2>
+            <p class="newsletter-text">Suscribite para recibir las novedades de VIINO</p>
+            <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="contact-form">
+                <div class="newsletter-dialogue">
+                    <input class="newsletter-input" type="email" name="email" id="email" placeholder="Ingresá tu email..."><input class="newsletter-submit" name="subscribe" type="submit" value="&#8594">
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <%- include('../partials/footer')%>
+    
+</body>
+</html>

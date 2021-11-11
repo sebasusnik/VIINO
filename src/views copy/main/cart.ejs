@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head',{subtitle:'cart',styleSheetName:'styles'}) %>
+
+<body>
+    <%- include('../partials/header')%>
+
+    <main class="main">
+        <div class=main-title-container>
+            <a value="Go back!" onclick="history.back()" class="back-arrow"><img src="img/icon/arrow.svg" alt=""></a>
+            <h1 class="main-title">TU COMPRA</h1>
+        </div>
+        <section class="cart">
+
+            <article class="cart-product">
+                <div class="cart-product-container">
+                    <img class="cart-product-image" src="/img/product-img/Rocamadre-Criolla.png" alt="Vino A Lisa 2019 Noemia">
+                    <div class="cart-product-info">
+                        <h3 class="cart-product-title">CRIOLLA 2021</h3>
+                        <h4 class="cart-product-producer">Rocamadre</h4>
+                        <p class="cart-product-price">$1700</p>
+                    </div>
+                    <div class="cart-product-counter">
+                        <button class="less">-</button>
+                        <p class="actual-quantity">3</p>
+                        <button class="more">+</button>
+                    </div>    
+                </div>
+                <div class="cart-product-delete">
+                    <img class="delete-icon" src="/img/icon/delete.svg" alt="Borrar producto del carro">
+                </div>
+            </article>
+
+            <article class="cart-product">
+                <div class="cart-product-container">
+                    <img class="cart-product-image" src="/img/product-img/Noemia-A-Lisa.png" alt="Vino A Lisa 2019 Noemia">
+                    <div class="cart-product-info">
+                        <h3 class="cart-product-title">A LISA 2019 </h3>
+                        <h4 class="cart-product-producer">Noemia</h4>
+                        <p class="cart-product-price">$2500</p>
+                    </div>
+                    <div class="cart-product-counter">
+                        <button class="less">-</button>
+                        <p class="actual-quantity">2</p>
+                        <button class="more">+</button>
+                    </div>    
+                </div>
+                <div class="cart-product-delete">
+                    <img class="delete-icon" src="/img/icon/delete.svg" alt="Borrar producto del carro">
+                </div>
+            </article> 
+
+            <article class="cart-product">
+                <div class="cart-product-container">
+                    <img class="cart-product-image" src="/img/product-img/Riccitelli-Kung-Fu-Tinto.png" alt="Vino A Lisa 2019 Noemia">
+                    <div class="cart-product-info">
+                        <h3 class="cart-product-title">KUNG FU TINTO 2020</h3>
+                        <h4 class="cart-product-producer">Riccitelli</h4>
+                        <p class="cart-product-price">$2500</p>
+                    </div>
+                    <div class="cart-product-counter">
+                        <button class="less">-</button>
+                        <p class="actual-quantity">1</p>
+                        <button class="more">+</button>
+                    </div>    
+                </div>
+                <div class="cart-product-delete">
+                    <img class="delete-icon" src="/img/icon/delete.svg" alt="Borrar producto del carro">
+                </div>
+            </article> 
+
+            <div class="big-buttons">
+                <button type="button" class="white-button">SEGUIR COMPRANDO</button>
+                <button type="reset"  class="white-button">VACIAR CARRITO</button>
+                <button type="submit" class="black-button">PAGAR : $ 6700</button>
+            </div>
+        </section>
+    </main>
+    <%- include('../partials/footer')%>
+    
+</body>
+</html>

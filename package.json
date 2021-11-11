@@ -1,22 +1,22 @@
 {
-  "name": "grupo_1_vino",
+  "name": "viino",
   "version": "1.0.0",
-  "description": "En este repositorio se trabajará el Proyecto Integrador del Grupo 1",
-  "main": "app.js",
+  "description": "En este repositorio se trabajará el Proyecto VIINO",
+  "main": "./src/app.js",
   "scripts": {
-    "start": "node app.js",
-    "startDev": "nodemon app.js"
+    "start": "node ./src/app.js",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SantiagoJurczyszyn/Grupo_1_Vino.git"
+    "url": "git+https://github.com/sebasusnik/VIINO"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SantiagoJurczyszyn/Grupo_1_Vino/issues"
+    "url": "https://github.com/sebasusnik/VIINO/issues"
   },
-  "homepage": "https://github.com/SantiagoJurczyszyn/Grupo_1_Vino#readme",
+  "homepage": "https://github.com/sebasusnik/VIINO#readme",
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",

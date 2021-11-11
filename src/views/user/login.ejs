@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head',{subtitle:'cart'}) %>
+
+<body>
+    <%- include('../partials/header')%>
+
+    <main>
+        <div class="main-title-container">
+            <a value="Go back!" onclick="history.back()" class="back-arrow"><img src="/img/icon/arrow.svg" alt=""></a>
+            <h1 class="main-title">TU CUENTA</h1>
+        </div>
+
+        <div class="login-signup-buttons">
+            <p class="login button-black">INICIA SESIÓN</p>
+            <a class="signup button-white" href="/user/register">REGISTRATE</a>
+        </div>   
+        <section class="form-container">
+            <p class="form-text">Iniciá sesión en VIINO con tu correo electrónico y contraseña</p>
+            <form action="resultadosLogin" method="POST">
+                <input class="input" type="email" name="email" id="email" placeholder="Correo electrónico...">
+                <input class="input" type="password" name="password" id="password" placeholder="Contraseña...">
+                <a class="form-text forgot-password">¿Olvidaste tu contraseña?</a>
+                <button class= "black-button"type="submit" value="enviar">INGRESAR</button>
+            </form>
+        </section>
+    </main>
+
+    <%- include('../partials/footer')%>
+
+    
+</body>
+</html>

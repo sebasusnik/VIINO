@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head',{subtitle:'shop',styleSheetName:'styles'}) %>
+
+<body>
+    <%- include('../partials/header')%>
+
+    <main class="main">
+        <div class="main-title-container">
+            <a value="Go back!" onclick="history.back()" class="back-arrow"><img src="/img/icon/arrow.svg" alt=""></a>
+            <h1 class="main-title">SHOP</h1>
+            <a href="" class="product-order">
+                <span> ordenar <img src="/img/icon/downarrow.svg" class="order-arrow" alt="extend-order"></span>
+            </a>
+        </div>
+        <ul class="shop-search-filters">
+            <li><a href="">TODOS</a></li>
+            <li><a href="">TINTOS</a></li>
+            <li><a href="">BLANCOS</a></li>
+            <li><a href="">OTROS</a></li>
+        </ul>
+        <section class="shop">
+            <!-- El forEach va a crear un articulo por CADA objeto del array -->
+            <!-- En cada iteracion el objeto "prod" tiene un producto completo -->
+            <% productsAMostrar.forEach((prod) => { %>    
+
+                <article class="product">
+                    <a href="/product/<%= prod.id %>"><img class="product-image" src="/img/product-img/<%= prod.image %>" alt="<%= prod.name %>"></a>
+                    <h3 class="product-title"><%= prod.name %></h2>
+                    <p class="price">$ <%= prod.price %></p>
+                    <button class="add-to-cart">AGREGAR</button>
+                </article>
+            
+            <% }) %>
+        </section>
+                    <div class="search-pagination">
+                <a href="" class="next-page"><img src="img/icon/next-page.svg" alt=""></a>
+                <ul class="pagination">
+                    <li class="page one">1</li>
+                    <li class="page 2">2</li>
+                    <li class="page 3">3</li>
+                    <li class="page 4">...</li>
+                    <li class="page 5">8</li>
+                </ul>
+            </div>
+
+        <section class="newsletter">
+            <h2 class="newsletter-title">NOVEDADES</h2>
+            <p class="newsletter-text">Suscribite para recibir las novedades de VIINO</p>
+            <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="contact-form">
+                <div class="newsletter-dialogue">
+                    <input class="newsletter-input" type="email" name="email" id="email" placeholder="Ingresá tu email..."><input class="newsletter-submit" name="subscribe" type="submit" value="&#8594">
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <%- include('../partials/footer')%>
+    
+</body>
+</html>

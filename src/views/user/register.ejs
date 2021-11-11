@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head',{subtitle:'cart'}) %>
+
+<body>
+    <%- include('../partials/header')%>
+
+    <main>
+        <div class="main-title-container">
+            <a value="Go back!" onclick="history.back()" class="back-arrow"><img src="/img/icon/arrow.svg" alt=""></a>
+            <h1 class="main-title">TU CUENTA</h1>
+        </div>
+        <div class="login-signup-buttons">
+            <a class="login button-white" href="/user/login">INICIA SESIÓN</a>
+            <p class="signup button-black">REGISTRATE</p>
+        </div>
+        <div class="form-container">
+            <p class="form-text">Creá una cuenta en VIINO y obtené el beneficio de una experiencia de compra más personal y de un pago on-line más veloz.</p>
+            <p class="form-subtext">Completar todos los campos es obligatorio</p>
+            <form action="resultadosRegister" method="POST">
+                <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre..." required>
+                <input class="input" type="text" name="apellido" id="apellido" placeholder="Apellido..." required>
+                <input class="input" type="email" name="email" id="email" placeholder="Correo electrónico..." required>
+                <input class="input" type="password" name="password" id="password" placeholder="Contraseña..." required>
+                <button class="black-button" type="submit" value="enviar">CREAR CUENTA</button>
+            </form>
+        </div>
+    </main>
+
+    <%- include('../partials/footer')%>
+
+</body>
+</html>

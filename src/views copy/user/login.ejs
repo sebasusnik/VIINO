@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head',{subtitle:'login',styleSheetName:'styles-login'}) %>
+<body>
+    <%- include('../partials/header')%>
+    <main>
+        <div class="foto">
+            <img src="/img/login.jpg" >
+        </div>
+        <div class="texto">
+            <div class="flecha-titulo">
+                <img class="flecha" src="/img/icon/arrow.svg" alt="">   
+                <h1 class="titulo">TU CUENTA</h1>
+            </div><br>
+            <div class="accion">
+                <div class="iniciarSesion">
+                    <p>INICIA SESIÓN</p>
+                </div>
+                <div class="registrarse">
+                    <p>REGISTRATE</p>
+                </div>
+            </div> <br>   
+            <p>Iniciá sesión en VIINO con tu correo electrónico y contraseña</p><br>
+            
+            <form action="resultadosLogin" method="POST">
+                <div class="campoEncuenta">
+                    <label for="email">Correo electrónico:</label>
+                    <input class="barra" type="email" name="email" id="email" placeholder="Correo electrónico">
+                </div>
+                <div class="campoEncuenta">
+                    <label for="password">Contraseña:</label>
+                    <input class="barra" type="password" name="password" id="password" placeholder="Contraseña">
+                </div>
+                <p class="olvidaste">¿Olvidaste la contraseña?</p><br>
+                <p><i class="far fa-square"></i><strong> Mantener sesión abierta</strong> </p><br>
+                <button type="submit" value="enviar">INGRESAR</button>
+            </form>
+        </div>
+    </main><br><br><br>
+    
+    <%- include('../partials/footer')%>
+    
+</body>
+</html>

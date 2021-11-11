@@ -36,8 +36,8 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active{
     -webkit-box-shadow: 0 0 0 30px white inset;
+    box-shadow: 0 0 0 30px white inset;
 }
-
 
 a {
     text-decoration: none;
@@ -78,7 +78,8 @@ input::placeholder {
     position: sticky;
     top: 0px;
     z-index: 100;
-    background-color: black;
+    background-color: black ;
+    height: 50px;
 }
 
 .main-header-top-bar {
@@ -139,10 +140,9 @@ input::placeholder {
     cursor: pointer;
 }
 
-nav{
+.main-header-bottom-bar{
     display: none;   
     text-decoration: none;
-    color: black
 }
 
 
@@ -371,6 +371,7 @@ svg:hover path {
     font-size: 16px;
     width: 100%;
     height: 36px;
+    text-transform: uppercase;
 }
 
 .price {
@@ -439,7 +440,7 @@ svg:hover path {
 .product-detail-image-container {
     border: solid black 1px;
     padding: 10px;
-    max-width: 350px;
+    max-width: 450px;
     margin: -8px auto 6%;
 }
 
@@ -665,6 +666,7 @@ svg:hover path {
 /* FOOTER */
 
 footer {
+    opacity: 1;
     position: relative;
     -webkit-transform: translate3d(0,0,1px);
     transform: translate3d(0,0,1px);
@@ -766,7 +768,7 @@ footer a {
 .form-text {
     font-size: 14px;
     font-weight: 300;
-    margin: 40px 0 20px;
+    margin-bottom: 28px;
 }
 
 .form-subtext {
@@ -783,6 +785,26 @@ footer a {
     display: block;
     padding-left: 22px;
     margin: 30px 0;
+    border-radius: 0px;
+}
+
+textarea {
+    min-height: 200px;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 16px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    border: solid 1px black;
+    border-radius: 0px;
+}
+
+.area::placeholder {
+    letter-spacing: .1em;
+    position: absolute;
+    top: 16px;
+    left: 20px
 }
 
 .forgot-password {
@@ -905,7 +927,7 @@ footer a {
 @media (min-width: 700px) {
 
     .main-header-top-bar {
-        max-width: 830px;
+        max-width: 92vw;
         margin: auto;
     }
 
@@ -934,8 +956,8 @@ footer a {
     }
 
     .footer-title {
-        margin-top: 190px;
-        margin-bottom: 230px;
+        margin-top: 16vh;
+        margin-bottom: 20vh;
         font-size: 72px;
     }
 
@@ -946,6 +968,37 @@ footer a {
 }
 
 @media (min-width: 940px) {
+
+    .main-header-bottom-bar {
+        display: block;
+        position: sticky;
+        top: 60px;
+        background-color: rgba(0, 0, 0, 50%);
+        height: 20px;
+        opacity: .2;
+    }
+
+    .main-header-bottom-bar:hover {
+        opacity: 1;
+        transition: 450ms;
+    }
+
+    .main-header-bottom-bar ul{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .main-header-bottom-bar ul li {
+        font-family: 'Work Sans', sans-serif;
+        font-size: 14px;
+        letter-spacing: .3em;
+        align-self: stretch;
+        text-align: center;
+        text-decoration: none;
+    }
+    .main-header-bottom-bar ul li a {
+        color:white;
+    }
 
     main {
         margin: 0 auto;
@@ -1038,10 +1091,18 @@ footer a {
 
 @media (min-width: 1200px) {
 
+    .main-header {
+        height: 60px;
+    }
+
     .main-header-top-bar {
-        max-width: 980px;
+        max-width: 78vw;
         margin: auto;
         height: 60px;
+    }
+
+    .main-header-bottom-bar {
+        top: 60px;
     }
 
     .lupe img {
@@ -1069,6 +1130,7 @@ footer a {
 
     .bag {
         top: 6px;
+        right: 0px;
     }
 
     .logo {
@@ -1109,8 +1171,8 @@ footer a {
     }
 
     .footer-title {
-        margin-top: 200px;
-        margin-bottom: 230px;
+        margin-top: 16vh;
+        margin-bottom: 20vh;
         font-size: 78px;
     }
 

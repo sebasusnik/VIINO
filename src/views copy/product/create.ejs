@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head',{subtitle:'create product',styleSheetName:'styles'}) %>
+
+<body>
+    <%- include('../partials/header')%>
+    <main>
+        <div class="main-title-container">
+            <a value="Go back!" onclick="history.back()" class="back-arrow"><img src="/img/icon/arrow.svg" alt=""></a>
+            <h1 class="main-title">CREAR PRODUCTO</h1>
+        </div>
+        <div class="form-container">
+            <br>
+            <p class="form-text">Creá un nuevo producto completando el formulario:</p>
+            <form action="resultadosRegister" method="POST">
+                <p class="form-subtext">DATOS PRINCIPALES</p>
+                <input class="input" type="text" name="productName" id="productName" placeholder="Nombre del vino/producto..." required>
+                <input class="input" type="text" name="producer" id="producer" placeholder="Bodega...">
+                <input class="input" type="number" name="year" id="year" placeholder="Año de la cosecha...">
+                <input class="input" type="text" name="varietal" id="varietal" placeholder="Varietal...">
+                <input class="input" type="number" name="price" id="price" placeholder="Precio..." required>
+                <textarea class="input area"name="description" id="description" cols="30" rows="10" placeholder="Descripción..." required></textarea></textarea>
+                <p class="form-subtext">FICHA TÉCNICA</p>
+                <input class="input" type="text" name="location" id="location" placeholder="Locación del viñedo...">
+                <input class="input" type="number" name="altitude" id="altitude" placeholder="Altitud...">
+                <input class="input" type="text" name="winemakers" id="winemakers" placeholder="Enólogos...">
+                <input class="input" type="text" name="varietalComp" id="varietalComp" placeholder="Composiciòn varietal...">
+                <input class="input" type="text" name="soil" id="soilComposition" placeholder="Composición del suelo...">
+                <input class="input" type="number" name="avb" id="avb" placeholder="Graduación alcohólica...">
+                <input class="input" type="text" name="breeding" id="breeding" placeholder="Crianza...">
+                <button class="black-button" type="submit" value="enviar">CREAR PRODUCTO</button>
+            </form>
+        </div>
+    </main>
+
+    <%- include('../partials/footer')%>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head',{subtitle:"editando: " + product.name,styleSheetName:'styles'}) %>
+
+<body>
+    <%- include('../partials/header')%>
+    <main>
+        <div class="main-title-container">
+            <a value="Go back!" onclick="history.back()" class="back-arrow"><img src="/img/icon/arrow.svg" alt=""></a>
+            <h1 class="main-title">MODIFICAR PRODUCTO</h1>
+        </div>
+        <div class="form-container">
+            <br>
+            <p class="form-text">Modificá los datos del producto <%= product.id %> completando el formulario:</p>
+             <!-- este action va al productRuoter -->
+             <!--<form method="POST" action="/product/edit/<%= product.id %>?_method=PUT"  enctype="multipart/form-data"> --> 
+               <!-- SACO  enctype="multipart/form-data"  PARA EMPEZAR SIN MULTER  / arriba deje la linea completa comentada -->
+             <form method="POST" action="/product/edit/<%= product.id %>?_method=PUT">  
+                <p class="form-subtext">DATOS PRINCIPALES</p>
+                <input class="input" type="text" name="name" id="name" placeholder="Nombre del vino/producto..." value="<%= product.name %>" required>
+                <input class="input" type="text" name="producer" id="producer" placeholder="Bodega producto" value="<%= product.producer %>">
+                <input class="input" type="number" name="harvestYear" id="harvestYear" placeholder="Año de la cosecha..." value="<%= product.harvestYear %>">
+                <input class="input" type="text" name="varietal" id="varietal" placeholder="Varietal..." value="<%= product.varietal %>">
+                <input class="input" type="number" name="price" id="price" placeholder="Precio..." value="<%= product.price %>" required>
+                <textarea class="input area" name="description" id="description" cols="30" rows="10" placeholder="Descripción..." ><%= product.description %></textarea>
+                <p class="form-subtext">FICHA TÉCNICA</p>
+                <input class="input" type="text" name="location" id="location" placeholder="Locación del viñedo..." value="<%= product.location %>">
+                <input class="input" type="number" name="altitude" id="altitude" placeholder="Altitud..." value="<%= product.altitude %>">
+                <input class="input" type="text" name="winemakers" id="winemakers" placeholder="Enólogos..." value="<%= product.winemakers %>" >
+                <input class="input" type="text" name="varietalComp" id="varietalComp" placeholder="Composiciòn varietal..." value="<%= product.varietalComp %>">
+                <input class="input" type="text" name="soil" id="soil" placeholder="Composición del suelo..." value="<%= product.soil %>">
+                <input class="input" type="number" name="avb" id="avb" placeholder="Graduación alcohólica..." value="<%= product.avb %>">
+                <input class="input" type="text" name="breeding" id="breeding" placeholder="Crianza..." value="<%= product.breeding %>">
+                <button class="black-button" type="submit">MODIFICAR PRODUCTO</button>
+            </form>
+        </div>
+    </main>
+
+    <%- include('../partials/footer')%>
+    
+</body>
+</html>
