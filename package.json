@@ -1,19 +1,11 @@
 {
   "name": "viino",
   "version": "1.0.0",
-<<<<<<< HEAD
   "description": "En este repositorio se trabajará el Proyecto VIINO",
   "main": "./src/app.js",
   "scripts": {
     "start": "node ./src/app.js",
-    "dev": "nodemon app.js"
-=======
-  "description": "En este repositorio se trabajará el Proyecto Integrador del Grupo 1",
-  "main": "./src/app.js",
-  "scripts": {
-    "start": "node ./src/app.js",
-    "startDev": "nodemon ./src/app.js"
->>>>>>> b7af504005da761c22630bc0d5d30c53966ccd88
+    "dev": "nodemon ./src/app.js"
   },
   "repository": {
     "type": "git",

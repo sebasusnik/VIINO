@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-<%- include('../partials/head',{ subtitle: product.name , styleSheetName:'styles' }) %>
+<%- include('../partials/head',{ subtitle: product.name }) %>
 
 <body>
     <%- include('../partials/header')%>
@@ -9,49 +8,6 @@
 
         <div class="main-title-container">
             <a value="Go back!" onclick="history.back()" class="back-arrow"><img src="/img/icon/arrow.svg" alt=""></a>
-=======
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" href="/img/icon/wine.ico">
-    <title>VIINO</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@100;200;300;400;500;600;700;800&family=Work+Sans:wght@100;200;400;500;600;700;800&display=swap" rel="stylesheet">    
-
-</head>
-
-<body>
-    <header class="main-header">
-        <div class="main-header-top-bar">
-            <a class="burger"><img src="img/icon/burger.svg" alt="burger menu"></a>
-            <a class="lupe"><img src="img/icon/lupe.svg" alt=""></a>
-            <a href="/"class="logo">VIINO</a>
-            <a class="user" href="/user/login"><img src="img/icon/user.svg" alt=""></a>
-            <a class="bag" href="/cart"><img src="img/icon/bag.svg" alt=""></a>
-        </div>
-        <nav class="main-header-bottom-bar">
-            <ul type="none">
-                <li><a href="">NOSOTROS</a></li>
-                <li><a href="">FAVORITOS</a></li>
-                <li><a href="">SHOP</a></li>
-                <li><a href="">TINTOS</a></li>
-                <li><a href="">BLANCOS</a></li>
-                <li><a href="">BODEGAS</a></li>
-                <li><a href="">OTROS</a></li>
-                <li><a href="">NOVEDADES</a></li>
-                <li><a href="">SELECCION</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main">
-
-        <div class="main-title-container">
-            <a value="Go back!" onclick="history.back()" class="back-arrow"><img src="img/icon/arrow.svg" alt=""></a>
->>>>>>> b7af504005da761c22630bc0d5d30c53966ccd88
             <h1 class="main-title">VOLVER</h1>
             <a href="" class="favourite">
                 <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +18,6 @@
 
         <section class="product-detail">
             <figure class="product-detail-image-container">
-<<<<<<< HEAD
                 <img class="product-detail-image" src="/img/product-img/<%= product.image %>" alt="<%= product.name %>">
             </figure>
 
@@ -76,20 +31,6 @@
             <div class="purchase-container">
                 <div class="price-quantity-box">
                     <p class="product-price">$ <%= product.price %></p>
-=======
-                <img class="product-detail-image" src="/img/product-img/Pielihueso-Tinto-de-Los-Sauces.png" alt="Imagen del vino seleccionado">
-            </figure>
-            <div class="product-id">
-                <h3 class="detail-producer">Pielihueso</h3>
-                <div class="line"></div>
-                <h2 class="product-detail-title">Tinto de Los Sauces 2020</h2>
-                <p class="product-detail-text">Pielihueso es un proyecto de vinos joven de la familia Bartolomé, que nace en Los Chacayes, con el objetivo de hacer vinos de mínima intervención, vinos que hagan sentir y que sorprendan. El nombre hace referencia a esta búsqueda de mostrar el lugar y la uva lo más francamente posible, mostarr el hueso.</p>
-                <snap class="product-detail-quote">- Bodega Pielihueso</snap>
-            </div>
-            <div class="purchase-container">
-                <div class="price-quantity-box">
-                    <p class="product-price">$2500</p>
->>>>>>> b7af504005da761c22630bc0d5d30c53966ccd88
                     <div class="product-counter">
                         <button class="less">-</button>
                         <p class="actual-quantity">1</p>
@@ -102,7 +43,6 @@
                 <h3 class="data-sheet-title">FICHA TÉCNICA</h3>
                 <div class="data-sheet-content">
                     <h4>Locación</h4>
-<<<<<<< HEAD
                     <p><%= product.location %></p>
                     <h4>Altura</h4>
                     <p><%= product.altitude %> msnm</p>
@@ -116,21 +56,6 @@
                     <p><%= product.avb %>º</p>
                     <h4>Crianza</h4>
                     <p><%= product.breeding %></p>
-=======
-                    <p>Los Chacayes, Tunuyán, Mendoza</p>
-                    <h4>Altura</h4>
-                    <p>1300msnm</p>
-                    <h4>Bodega Pielihueso</h4>
-                    <p>Sebastián Bisole · Alejandro Bartolomé</p>
-                    <h4>Composición varietal</h4>
-                    <p>Torrontés 50% · Chardonnay 30% · Sauvignon Blanc 15% · Pinot Gris 5%</p>
-                    <h4>Composición del suelo</h4>
-                    <p>Franco arenoso</p>
-                    <h4>Graduación alcoholica</h4>
-                    <p>11.7º</p>
-                    <h4>Crianza</h4>
-                    <p>Cofermentación en huevo de cemento en contacto con pieles y semillas al estilo de los vinos naranjos de Georgia. Crianza en tanque y barrica usada.</p>
->>>>>>> b7af504005da761c22630bc0d5d30c53966ccd88
                 </div>
             </div>
 
@@ -305,36 +230,7 @@
 
     </main>
 
-<<<<<<< HEAD
     <%- include('../partials/footer')%>
     
-=======
-    <footer class="footer">
-        <a href="/"><h2 class="footer-title">VIINO</h2></a>
-        <div class="footer-content">
-            <section class="address">
-                <h3>NUESTRO LOCAL</h3>
-                <p>Av Forest 4444, Colegiales, Ciudad Autonoma de Buenos Aires, Argentina.</p>
-            </section>
-            <section class="contact-us">
-                <h3>CONTACTO</h3>
-                <p>+549114444444</p>
-                <p>info@viino.com.ar</p>
-            </section>
-            <section class="more-info">
-                <h3>INFORMACION</h3>
-                <a href=""><p>FAQs</p></a>
-                <a href=""><p>Legales</p></a>
-                <a href=""><p>Política de privacidad</p></a>
-            </section>
-        </div>
-        <div class="social-media">
-            <a href=""><img src="/img/icon/facebook.svg" alt="Contacto facebook"></a>
-            <a href=""><img src="/img/icon/youtube.svg" alt="Contacto youtube"></a>
-            <a href=""><img src="/img/icon/instagram.svg" alt="Contacto instagram"></a>
-            <a href=""><img src="/img/icon/whatsapp.svg" alt="Contacto whatsapp"></a>
-        </div>
-    </footer>
->>>>>>> b7af504005da761c22630bc0d5d30c53966ccd88
 </body>
 </html>
