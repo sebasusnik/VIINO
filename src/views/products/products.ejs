@@ -28,7 +28,6 @@
                     <div class="line"></div>
                     <h2 class="product-detail-title"><%= product.name + ' ' + + product.year %></h2>
                     <p class="product-detail-text"><%= product.description %></p>
-                    <!-- SACO ESTO POR AHORA QUE NO ESTA EN EL JSON <snap class="product-detail-quote">- Bodega Pielihueso</snap> -->
                 </section>
                 <section class="purchase-container">
                     <div class="price-quantity-box">
@@ -76,7 +75,7 @@
         </section>
 
 
-        <% if(productsSameProducer) { %>
+        <% if(productsSameProducer.name != undefined ) { %>
             <section class="carrousel-recomendation">
                 <h2 class="carrousel-title">MÁS DE <%= product.producer %>...</h2>
                 <div class="carrousel">

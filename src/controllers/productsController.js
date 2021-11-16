@@ -66,7 +66,9 @@ const productsController = {
       }
     };
     // Ejecutamos la funcion para sugerir todos los productos de la bodega menos el actual
-    removeProduct(productsSameProducer, requiredProduct)
+    removeProduct(productsSameProducer, requiredProduct);
+
+    console.log(productsSameProducer.name);
 
     // Para el segundo carrousel
     const productsRecomend = products.slice(11,16);
