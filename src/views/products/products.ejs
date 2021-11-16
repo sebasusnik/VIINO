@@ -77,19 +77,19 @@
 
 
         <% if(productsSameProducer) { %>
-        <section class="carrousel-recomendation">
-            <h2 class="carrousel-title">MÁS DE <%= product.producer %>...</h2>
-            <div class="carrousel">
-                <% productsSameProducer.forEach((prod) => { %> 
-                    <article class="carrousel-product">
-                        <a href="/products/<%= prod.id %>"><img class="product-image" src="/img/product-img/<%= prod.image %>" alt="<%= prod.name %>"></a>
-                        <h3 class="product-title"><%= prod.name %></h2>
-                        <p class="price">$ <%= prod.price %></p>
-                        <button class="add-to-cart">AGREGAR</button>
-                    </article>
-                <% }) %>
-            </div>
-        </section>
+            <section class="carrousel-recomendation">
+                <h2 class="carrousel-title">MÁS DE <%= product.producer %>...</h2>
+                <div class="carrousel">
+                    <% productsSameProducer.forEach((prod) => { %> 
+                        <article class="carrousel-product">
+                            <a href="/products/<%= prod.id %>"><img class="product-image" src="/img/product-img/<%= prod.image %>" alt="<%= prod.name %>"></a>
+                            <h3 class="product-title"><%= prod.name + ' ' + prod.year %></h2>
+                            <p class="price">$ <%= prod.price %></p>
+                            <button class="add-to-cart">AGREGAR</button>
+                        </article>
+                    <% }) %>
+                </div>
+            </section>
         <% } %>
 
         <section class="carrousel-recomendation">
@@ -98,7 +98,7 @@
                 <% productsRecomend.forEach((prod) => { %> 
                     <article class="carrousel-product">
                         <a href="/products/<%= prod.id %>"><img class="product-image" src="/img/product-img/<%= prod.image %>" alt="<%= prod.name %>"></a>
-                        <h3 class="product-title"><%= prod.name %></h2>
+                        <h3 class="carrousel-product-title"><%= prod.name + ' ' + prod.year %></h2>
                         <p class="price">$ <%= prod.price %></p>
                         <button class="add-to-cart">AGREGAR</button>
                     </article>

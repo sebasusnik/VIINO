@@ -69,7 +69,7 @@ const productsController = {
     removeProduct(productsSameProducer, requiredProduct)
 
     // Para el segundo carrousel
-    const productsRecomend = products.slice(11,15);
+    const productsRecomend = products.slice(11,16);
 
     res.render("./products/products", {
       product: requiredProduct, productsSameProducer, productsRecomend
