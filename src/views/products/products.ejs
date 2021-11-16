@@ -76,7 +76,7 @@
         </section>
 
 
-
+        <% if(productsSameProducer) { %>
         <section class="carrousel-recomendation">
             <h2 class="carrousel-title">MÁS DE <%= product.producer %>...</h2>
             <div class="carrousel">
@@ -90,6 +90,7 @@
                 <% }) %>
             </div>
         </section>
+        <% } %>
 
         <section class="carrousel-recomendation">
             <h2 class="carrousel-title">TAMBIÉN TE RECOMENDAMOS...</h2>
