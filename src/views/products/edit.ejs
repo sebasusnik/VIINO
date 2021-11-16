@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head',{subtitle:"editando: " + product.name,styleSheetName:'styles'}) %>
+
+<body>
+    <%- include('../partials/header')%>
+    <main>
+        <div class="main-title-container">
+            <a value="Go back!" onclick="history.back()" class="back-arrow"><img src="/img/icon/arrow.svg" alt=""></a>
+            <h1 class="main-title">MODIFICAR PRODUCTO</h1>
+        </div>
+        <div class="form-container">
+            <br>
+            <p class="form-text">Modificá los datos del producto <%= product.id %> completando el formulario:</p>
+            <!-- este action va al productRuoter -->
+            
+            <form method="POST" action="/products/<%= product.id %>?_method=PUT" enctype="multipart/form-data">     
+                <p class="form-subtext">DATOS PRINCIPALES</p>
+                <!-- AGREGO LA IMAGEN POR ACA (PROVISORIO)-->
+                <br>
+                <figure class="product-detail-image-container">
+                    <img class="product-detail-image" src="/img/product-img/<%= product.image %>" alt="<%= product.name %>">
+                </figure>    
+                    
+                <input class="product-detail-image" type="file" name="imageProd" id="imageProd" >
+                <br> <br>
+
+                <!-- NO SE VEN LOS CIRCULITOS - ESPERO RESOLVERLO ALGUN DIA CERCANO - 
+                    TAMPOCO SE COMO RECUPERAR EL VALOR ALMACENADO EN EL JASON
+                <label class="form-subtext" >Tipo de producto</label>
+                <input type="radio" id="Tinto" name="type" value="Tinto" checked> <label for="Tinto">Tinto</label>
+                <input type="radio" id="Blanco" name="type" value="Blanco"> <label for="Blanco">Blanco</label>
+                <input type="radio" id="Otro" name="type" value="Otro"> <label for="Otro">Otro</label>
+                <br>-->
+
+                <!-- MIENTRAS TANTO LO RESUELVO CON TEXTO Y OJALA QUE EL CLIENTE INGRESE LO QUE CORRESPONDA-->
+                <label>
+                    <h3 class="label">Tipo de vino/producto:</h3>
+                    <input class="input" type="text" name="type" id="type" value="<%= product.type %>">
+                </label>
+                <label>
+                    <h3 class="label">Subtipo de vino/producto:</h3>
+                    <input class="input" type="text" name="subype" id="subtype" placeholder="Subtipo de vino/producto..." value="<%= product.subtype %>" >
+                </label>
+                <label>
+                    <h3 class="label">Nombre del vino/producto:</h3>
+                    <input class="input" type="text" name="name" id="name" placeholder="Nombre del vino/producto..." value="<%= product.name %>">
+                </label>
+                <label>
+                    <h3 class="label">Bodega:</h3>
+                    <input class="input" type="text" name="producer" id="producer" placeholder="Bodega producto" value="<%= product.producer %>">
+                </label>
+                <label>
+                    <h3 class="label">Año de la cosecha:</h3>
+                    <input class="input" type="number" name="harvestYear" id="harvestYear" placeholder="Año de la cosecha..." value="<%= product.harvestYear %>">
+                </label>
+                <label>
+                    <h3 class="label">Varietal:</h3>
+                    <input class="input" type="text" name="varietal" id="varietal" placeholder="Varietal..." value="<%= product.varietal %>">
+                </label>
+                <label>
+                    <h3 class="label">Precio:</h3>
+                    <input class="input" type="number" name="price" id="price" placeholder="Precio..." value="<%= product.price %>">
+                </label>
+                <label>
+                    <h3>Descripción:</h3>
+                    <textarea class="input area" name="description" id="description" cols="30" rows="10" placeholder="Descripción..." ><%= product.description %></textarea>
+                </label>
+                <p class="form-subtext">FICHA TÉCNICA</p>
+                <label>
+                    <h3 class="label">Locación del viñedo:</h3>
+                    <input class="input" type="text" name="location" id="location" placeholder="Locación del viñedo..." value="<%= product.location %>">
+                </label>
+                <label>
+                    <h3 class="label">Altitud:
+                    </h3>
+                    <input class="input" type="number" name="altitude" id="altitude" placeholder="Altitud..." value="<%= product.altitude %>">
+                </label>
+                <label>
+                    <h3 class="label">Enólogos:</h3>
+                    <input class="input" type="text" name="winemakers" id="winemakers" placeholder="Enólogos..." value="<%= product.winemakers %>">
+                </label>
+                <label>
+                    <h3 class="label">Composiciòn varietal:</h3>
+                    <input class="input" type="text" name="varietalComp" id="varietalComp" placeholder="Composiciòn varietal..." value="<%= product.varietalComp %>">
+                </label>
+                <label>
+                    <h3 class="label">Composición del suelo:</h3>
+                    <input class="input" type="text" name="soil" id="soil" placeholder="Composición del suelo..." value="<%= product.soil %>">
+                </label>
+                <label>
+                    <h3 class="label">Graduación alcohólica:</h3>
+                    <input class="input" type="number" name="avb" id="avb" placeholder="Graduación alcohólica..." step="0.1" min="0" max="16" value="<%= product.avb %>">
+                </label>
+                <label>
+                    <h3 class="label">Crianza:</h3>
+                    <input class="input" type="text" name="breeding" id="breeding" placeholder="Crianza..." value="<%= product.breeding %>">
+                </label>
+                <button class="black-button" type="submit">MODIFICAR PRODUCTO</button>
+            </form>
+        </div>
+    </main>
+
+    <%- include('../partials/footer')%>
+    
+</body>
+</html>

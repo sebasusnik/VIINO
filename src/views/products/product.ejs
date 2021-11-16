@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head',{ subtitle: product.name }) %>
+<%- include('../partials/head',{ subtitle: product.name , styleSheetName:'styles' }) %>
 
 <body>
     <%- include('../partials/header')%>
@@ -16,53 +16,69 @@
             </a>
         </div>
 
+
+
         <section class="product-detail">
             <figure class="product-detail-image-container">
                 <img class="product-detail-image" src="/img/product-img/<%= product.image %>" alt="<%= product.name %>">
             </figure>
-
-            <div class="product-id">
-                <h3 class="detail-producer"><%= product.producer %></h3>
-                <div class="line"></div>
-                <h2 class="product-detail-title"><%= product.name %></h2>
-                <p class="product-detail-text"><%= product.description %></p>
-                <!-- SACO ESTO POR AHORA QUE NO ESTA EN EL JSON <snap class="product-detail-quote">- Bodega Pielihueso</snap> -->
-            </div>
-            <div class="purchase-container">
-                <div class="price-quantity-box">
-                    <p class="product-price">$ <%= product.price %></p>
-                    <div class="product-counter">
-                        <button class="less">-</button>
-                        <p class="actual-quantity">1</p>
-                        <button class="more">+</button>
+            <article class= "product-info">
+                <section class="product-id">
+                    <h3 class="detail-producer"><%= product.producer %></h3>
+                    <div class="line"></div>
+                    <h2 class="product-detail-title"><%= product.name %></h2>
+                    <p class="product-detail-text"><%= product.description %></p>
+                    <!-- SACO ESTO POR AHORA QUE NO ESTA EN EL JSON <snap class="product-detail-quote">- Bodega Pielihueso</snap> -->
+                </section>
+                <section class="purchase-container">
+                    <div class="price-quantity-box">
+                        <p class="product-price">$ <%= product.price %></p>
+                        <div class="product-counter">
+                            <button class="less">-</button>
+                            <p class="actual-quantity">1</p>
+                            <button class="more">+</button>
+                        </div>
                     </div>
-                </div>
-                <button class="black-button">AGREGAR A MI COMPRA</button>
-            </div>
-            <div class="data-sheet">
-                <h3 class="data-sheet-title">FICHA TÉCNICA</h3>
-                <div class="data-sheet-content">
-                    <h4>Locación</h4>
-                    <p><%= product.location %></p>
-                    <h4>Altura</h4>
-                    <p><%= product.altitude %> msnm</p>
-                    <h4>Enólogos</h4>
-                    <p><%= product.winemakers %></p>
-                    <h4>Composición varietal</h4>
-                    <p><%= product.varietalComp %></p>
-                    <h4>Composición del suelo</h4>
-                    <p><%= product.soil %></p>
-                    <h4>Graduación alcoholica</h4>
-                    <p><%= product.avb %>º</p>
-                    <h4>Crianza</h4>
-                    <p><%= product.breeding %></p>
-                </div>
-            </div>
+                    <form action="">
+                        <button class="black-button">AGREGAR A MI COMPRA</button>
+                    </form>
+                </section>
 
+                <section class="edit-delete-buttons">
+                    <form action="/products/<%= product.id %>/edit">
+                        <button  class="grey-button">EDITAR PRODUCTO</a></button>
+                    </form>
+                    <form action="/products/<%= product.id %>/?_method=DELETE" method="POST">
+                        <button type="submit" class="grey-button">ELIMINAR PRODUCTO</button>
+                    </form>
+                </div>
+            </article>
         </section>
 
+        <section class="data-sheet">
+            <h3 class="data-sheet-title">FICHA TÉCNICA</h3>
+            <div class="data-sheet-content">
+                <h4>Locación</h4>
+                <p><%= product.location %></p>
+                <h4>Altura</h4>
+                <p><%= product.altitude %> msnm</p>
+                <h4>Enólogos</h4>
+                <p><%= product.winemakers %></p>
+                <h4>Composición varietal</h4>
+                <p><%= product.varietalComp %></p>
+                <h4>Composición del suelo</h4>
+                <p><%= product.soil %></p>
+                <h4>Graduación alcoholica</h4>
+                <p><%= product.avb %>º</p>
+                <h4>Crianza</h4>
+                <p><%= product.breeding %></p>
+            </div>
+        </section>
+
+
+
         <section class="carrousel-recomendation">
-            <h2 class="carrousel-title">MÁS DE PIELIHUESO...</h2>
+            <h2 class="carrousel-title">MÁS DE <%= product.producer %>...</h2>
             <div class="carrousel">
                 <article class="carrousel-product">
                     <a href="/product"><img class="product-image" src="/img/product-img/Ver-Sacrum-La-Dama-del-Abrigo-Rojo.png" alt="Vino Malbec Primero 2019"></a>
