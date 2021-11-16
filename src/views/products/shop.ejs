@@ -26,7 +26,7 @@
 
                 <article class="product">
                     <a href="/products/<%= prod.id %>"><img class="product-image" src="/img/product-img/<%= prod.image %>" alt="<%= prod.name %>"></a>
-                    <h3 class="product-title"><%= prod.name %></h2>
+                    <h3 class="product-title"><%= prod.shortname + ' ' + prod.year %></h2>
                     <p class="price">$ <%= prod.price %></p>
                     <button class="add-to-cart">AGREGAR</button>
                 </article>
