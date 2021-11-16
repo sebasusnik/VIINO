@@ -553,7 +553,8 @@
     },
     {
         "id": 31,
-        "name": "Los Chocos Vertebrado Pinot Noir 2016",
+        "name": "Vertebrado Pinot Noir",
+        "shortname": "Vertebrado Pinot Noir",
         "producer": "Viña Los Chocos",
         "year": 2016,
         "varietal": "Pinot Noir",
