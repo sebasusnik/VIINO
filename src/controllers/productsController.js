@@ -44,7 +44,7 @@ const productsController = {
   /*** MUESTRA EL DETALLE DE UN PRODUCTO ***/
 
   // DETAIL - Detail from one product
-  product: (req, res) => {
+  detail: (req, res) => {
     // Se recibe un objeto tipo producto
     const requiredId = req.params.id;
 
@@ -54,8 +54,13 @@ const productsController = {
       return prod.id == requiredId;
     });
 
+    // Productos filtrados para los carrousel             // Retorna los productos de el mismo productor
+    const productsSameProducer = products.filter((prod) => {return prod.producer === requiredProduct.producer});
+
+    const productsRecomend = products.slice(18,22);
+
     res.render("./products/products", {
-      product: requiredProduct,
+      product: requiredProduct, productsSameProducer, productsRecomend
     });
   },
 

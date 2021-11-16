@@ -15,7 +15,7 @@ router.get ("/create", productsController.create);
 router.post ("/",upload.single("imageProd"), productsController.create);
 
 /*** GET ONE PRODUCT (DETAIL) ***/
-router.get('/:id', productsController.product);
+router.get('/:id', productsController.detail);
 
 /*** EDIT PRODUCT FORM ***/
 router.get('/:id/edit', productsController.edit);
