@@ -56,6 +56,15 @@ const productsController = {
 
     // Productos filtrados para los carrousel             // Retorna los productos de el mismo productor
     const productsSameProducer = products.filter((prod) => {return prod.producer === requiredProduct.producer});
+    // Creamos funcion para eliminar el producto actual del array
+    function removeProduct(arr, prod) {
+      var i = arr.indexOf(prod);
+      if (i !== -1) {
+        arr.splice( i, 1)
+      }
+    };
+    // Ejecutamos la funcion para sugerir todos los productos de la bodega menos el actual
+    removeProduct(productsSameProducer, requiredProduct)
 
     const productsRecomend = products.slice(18,22);
 
