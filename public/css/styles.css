@@ -636,7 +636,7 @@ svg:hover path {
     justify-content: space-evenly;
     scroll-snap-align: center;
     border: solid rgba(0, 0, 0, 10%) 1px;
-    margin: 10px 2%;
+    margin: 10px 1%;
     width: 150px;
     height: 320px;
     text-align: center;
