@@ -48,8 +48,11 @@ const productsController = {
     // Se recibe un objeto tipo producto
     const requiredId = req.params.id;
 
-    // Buscar el producto en el array             // guarda como resultado el primer elemento que coincida con el param
-    const requiredProduct = products.find((prod) => {prod.id == requiredId});
+    // Buscar el producto en el array
+    const requiredProduct = products.find((prod) => {
+      // guarda como resultado el primer elemento que coincida con el param
+      return prod.id == requiredId;
+    });
 
     res.render("./products/products", {
       product: requiredProduct,

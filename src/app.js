@@ -30,7 +30,7 @@ app.use ("/products", productsRouter);
 app.use ("/user", userRouter);
 
 // ************ error handler ************
-app.use((req, res, next) => next(createError(404)));
+//app.use((req, res, next) => next(createError(404)));
 
 /*
 app.use((err, req, res, next) => {
