@@ -71,7 +71,7 @@ const productsController = {
     console.log(productsSameProducer.name);
 
     // Para el segundo carrousel
-    const productsRecomend = products.slice(11,16);
+    const productsRecomend = products.slice(11,19);
 
     res.render("./products/products", {
       product: requiredProduct, productsSameProducer, productsRecomend
