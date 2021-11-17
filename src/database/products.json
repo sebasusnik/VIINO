@@ -438,6 +438,24 @@
         "breeding": "Metodo Champenoise 48 meses sobre levaduras"
     },
     {
+        "id": 24,
+        "name": "Brut Nature Pinot Noir Rose",
+        "producer": "Otronia",
+        "harvestYear": 2008,
+        "varietal": "Pinot Noir",
+        "type": "Espumoso",
+        "price": 3800,
+        "description": "Prensado con racimo entero, fermentado con levaduras nativas y elaborado bajo método tradicional con 25 meses de crianza sobre lías. Suave color amarillo pálido, presenta aromas de pan tostado, frutas como durazno blanco, cítricos y notas herbales y florales. En boca las suaves burbujas aportan textura equilibrada y elegancia, complementada por una gran acidez y una delicada sensación de untuosidad.",
+        "image": "Otronia-Brut-Nature-Rose.png",
+        "location": "Valle de Trevelin, Chubut",
+        "altitude": 385,
+        "winemakers": "Juan Pablo Murgia",
+        "varietalComp": "Pinot Noir 100%",
+        "soil": "Calcáreo",
+        "avb": 12.5,
+        "breeding": "25 meses de crianza sobre lias"
+    },
+    {
         "id": 25,
         "name": "Tiara",
         "shortname": "Viña Alicia Tiara",
