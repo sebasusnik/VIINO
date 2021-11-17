@@ -26,19 +26,15 @@
                 <br> <br>
                 <label>
                     <h3 class="label">Tipo de vino/producto:</h3>
-                    <input class="input" type="text" name="type" id="type" value="<%= product.type %>">
-                </label>
-                <label>
-                    <h3 class="label">Subtipo de vino/producto:</h3>
 					<select name="type" id="type" class="select">
 						<option value="">Elegí</option>
-						<option value="Tinto">Tinto</option>
-						<option value="Blanco">Blanco</option>
-                        <option value="Rosado">Rosado</option>
-                        <option value="Champagne">Champagne</option>
-                        <option value="Pet Nat">Pet Nat</option>
-                        <option value="Vermut">Vermut</option>
-                        <option value="Accesorio">Accesorio</option>
+						<option value="Tinto" <%= product.type == "Tinto" ? 'selected' : ''  %> >Tinto</option>
+						<option value="Blanco" <%= product.type == "Blanco" ? 'selected' : ''  %> >Blanco</option>
+                        <option value="Rosado" <%= product.type == "Rosado" ? 'selected' : ''  %> >Rosado</option>
+                        <option value="Champagne" <%= product.type == "Champagne" ? 'selected' : ''  %> >Champagne</option>
+                        <option value="Pet Nat" <%= product.type == "Pet Nat" ? 'selected' : ''  %> >Pet Nat</option>
+                        <option value="Vermut" <%= product.type == "Vermut" ? 'selected' : ''  %> >Vermut</option>
+                        <option value="Accesorio" <%= product.type == "Accesorio" ? 'selected' : ''  %> >Accesorio</option>
 					</select>
                 </label>
                 <label>
@@ -51,7 +47,7 @@
                 </label>
                 <label>
                     <h3 class="label">Año de la cosecha:</h3>
-                    <input class="input" type="number" name="year" id="year" placeholder="Año de la cosecha..." value="<%= product.harvestYear %>">
+                    <input class="input" type="number" name="year" id="year" placeholder="Año de la cosecha..." value="<%= product.year %>">
                 </label>
                 <label>
                     <h3 class="label">Varietal:</h3>
