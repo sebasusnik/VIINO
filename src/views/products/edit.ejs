@@ -21,8 +21,10 @@
                 <figure class="product-detail-image-container">
                     <img class="product-detail-image" src="/img/product-img/<%= product.image %>" alt="<%= product.name %>">
                 </figure>    
-                    
-                <input class="product-detail-image" type="file" name="imageProd" id="imageProd" >
+                <label for="imageProd">
+                    <h3 class="label">Elegí una nueva imagen de producto:</h3>
+                    <input class="image-input"  type="file" name="imageProd" id="imageProd">
+                </label>
                 <br> <br>
                 <label>
                     <h3 class="label">Tipo de vino/producto:</h3>
