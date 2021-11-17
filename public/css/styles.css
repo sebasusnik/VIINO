@@ -72,7 +72,7 @@ input[type=number]{
 
 input::placeholder {
     font-family: 'Work Sans', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
     letter-spacing: .1em;
 }
@@ -594,6 +594,10 @@ svg:hover path {
 }
 
 
+/* CREATE PRODUCT */
+
+
+
 /* EDIT DELETE PRODUCT */
 
 .edit-delete-buttons {
@@ -610,11 +614,33 @@ svg:hover path {
     display: flex;
 }
 
+.select {
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0;
+    border: solid 1px black;
+    margin-top: 20px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: .1em;
+    padding-left: 18px;
+}
+
 .grey-button {
     height: 50px;
-    width: 98%;
+    width: 100%;
     margin: auto;
 }
+
+.image-input {
+    margin-top: 14px;
+}
+
+/* .delete {
+    background-color: #bdbdbd;
+} */
 
 
 /* CARROUSEL */
@@ -814,7 +840,11 @@ footer a {
 }
 
 .form-container{
-    margin-bottom: 100px;
+    margin-bottom: 120px;
+}
+
+.edit {
+    margin-top: 60px;
 }
 
 .form-text {
@@ -824,10 +854,18 @@ footer a {
 }
 
 .form-subtext {
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 400;
     border-left: solid 1px black;
     padding-left: 12px;
+}
+
+.label {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: .1em;
+    margin-top: 20px;
 }
 
 .input {
@@ -836,7 +874,7 @@ footer a {
     border: solid 1px black;
     display: block;
     padding-left: 22px;
-    margin: 30px 0;
+    margin-top: 20px;
     border-radius: 0px;
 }
 
@@ -850,18 +888,20 @@ textarea {
     font-size: 14px;
     border: solid 1px black;
     border-radius: 0px;
+    margin-bottom: 40px;
 }
 
 .area::placeholder {
     letter-spacing: .1em;
     position: absolute;
     top: 16px;
-    left: 20px
+    left: 20px;
+    font-weight: 400;
 }
 
 .forgot-password {
     display: block;
-    margin: -14px 0 50px;
+    margin: 16px 0 50px;
     border-left: solid 1px black;
     padding-left: 8px;
 }
@@ -1036,8 +1076,6 @@ textarea {
         opacity: .2;
     }
 
-
-
     .main-header-bottom-bar:hover {
         opacity: 1;
         transition: 450ms;
@@ -1078,6 +1116,12 @@ textarea {
         max-width: 810px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .create {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0;
     }
 
     .shop {

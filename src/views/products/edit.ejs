@@ -14,7 +14,7 @@
             <p class="form-text">Modificá los datos del producto <%= product.id %> completando el formulario:</p>
             <!-- este action va al productRuoter -->
             
-            <form method="POST" action="/products/<%= product.id %>?_method=PUT" enctype="multipart/form-data">     
+            <form method="POST" action="/products/<%= product.id %>?_method=PUT" enctype="multipart/form-data" class="form">     
                 <p class="form-subtext">DATOS PRINCIPALES</p>
                 <!-- AGREGO LA IMAGEN POR ACA (PROVISORIO)-->
                 <br>
@@ -24,23 +24,22 @@
                     
                 <input class="product-detail-image" type="file" name="imageProd" id="imageProd" >
                 <br> <br>
-
-                <!-- NO SE VEN LOS CIRCULITOS - ESPERO RESOLVERLO ALGUN DIA CERCANO - 
-                    TAMPOCO SE COMO RECUPERAR EL VALOR ALMACENADO EN EL JASON
-                <label class="form-subtext" >Tipo de producto</label>
-                <input type="radio" id="Tinto" name="type" value="Tinto" checked> <label for="Tinto">Tinto</label>
-                <input type="radio" id="Blanco" name="type" value="Blanco"> <label for="Blanco">Blanco</label>
-                <input type="radio" id="Otro" name="type" value="Otro"> <label for="Otro">Otro</label>
-                <br>-->
-
-                <!-- MIENTRAS TANTO LO RESUELVO CON TEXTO Y OJALA QUE EL CLIENTE INGRESE LO QUE CORRESPONDA-->
                 <label>
                     <h3 class="label">Tipo de vino/producto:</h3>
                     <input class="input" type="text" name="type" id="type" value="<%= product.type %>">
                 </label>
                 <label>
                     <h3 class="label">Subtipo de vino/producto:</h3>
-                    <input class="input" type="text" name="subype" id="subtype" placeholder="Subtipo de vino/producto..." value="<%= product.subtype %>" >
+					<select name="type" id="type" class="select">
+						<option value="">Elegí</option>
+						<option value="Tinto">Tinto</option>
+						<option value="Blanco">Blanco</option>
+                        <option value="Rosado">Rosado</option>
+                        <option value="Champagne">Champagne</option>
+                        <option value="Pet Nat">Pet Nat</option>
+                        <option value="Vermut">Vermut</option>
+                        <option value="Accesorio">Accesorio</option>
+					</select>
                 </label>
                 <label>
                     <h3 class="label">Nombre del vino/producto:</h3>
@@ -52,7 +51,7 @@
                 </label>
                 <label>
                     <h3 class="label">Año de la cosecha:</h3>
-                    <input class="input" type="number" name="harvestYear" id="harvestYear" placeholder="Año de la cosecha..." value="<%= product.harvestYear %>">
+                    <input class="input" type="number" name="year" id="year" placeholder="Año de la cosecha..." value="<%= product.harvestYear %>">
                 </label>
                 <label>
                     <h3 class="label">Varietal:</h3>
@@ -63,7 +62,7 @@
                     <input class="input" type="number" name="price" id="price" placeholder="Precio..." value="<%= product.price %>">
                 </label>
                 <label>
-                    <h3>Descripción:</h3>
+                    <h3 class="label">Descripción:</h3>
                     <textarea class="input area" name="description" id="description" cols="30" rows="10" placeholder="Descripción..." ><%= product.description %></textarea>
                 </label>
                 <p class="form-subtext">FICHA TÉCNICA</p>
@@ -96,7 +95,7 @@
                     <h3 class="label">Crianza:</h3>
                     <input class="input" type="text" name="breeding" id="breeding" placeholder="Crianza..." value="<%= product.breeding %>">
                 </label>
-                <button class="black-button" type="submit">MODIFICAR PRODUCTO</button>
+                <button class="black-button edit" type="submit">MODIFICAR PRODUCTO</button>
             </form>
         </div>
     </main>

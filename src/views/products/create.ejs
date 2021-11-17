@@ -18,22 +18,21 @@
                 <input class="input" type="text" name="producer" id="producer" placeholder="Bodega...">
                 <input class="input" type="number" name="year" id="year" placeholder="Año de la cosecha...">
                 <input class="input" type="text" name="varietal" id="varietal" placeholder="Varietal...">
-                <label for="type" class="form-label">Tipo:</label>
-						<select name="type" id="type" class="form-input">
-							<option value="">Elegí</option>
-							<option value="red">Tinto</option>
-							<option value="white">Blanco</option>
-                            <option value="other">Otros</option>
-						</select>
-                <label for="subtype" class="form-label">Subtipo:</label>
-						<select name="subtype" id="subtype" class="form-input">
-							<option value="">Elegí</option>
-							<option value="pink">Rosados</option>
-							<option value="sparkling">Espumantes</option>
-                            <option value="vermut">Vermut</option>                            
-                            <option value="accessories">Accesorios</option>
-						</select>
+				<select name="type" id="type" class="select">
+					<option value="">Tipo de vino / producto</option>
+					<option value="Tinto">Tinto</option>
+					<option value="Blanco">Blanco</option>
+                    <option value="Rosado">Rosado</option>
+                    <option value="Champagne">Champagne</option>
+                    <option value="Pet Nat">Pet Nat</option>
+                    <option value="Vermut">Vermut</option>
+                    <option value="Accesorio">Accesorio</option>
+				</select>
                 <input class="input" type="number" name="price" id="price" placeholder="Precio..." required>
+                <label for="imageProd" class="label">
+                    <h3 class="label">Subí una imagen del vino / producto:</h3>
+                    <input class="image-input" type="file" name="imageProd" id="imageProd" >
+                </label>
                 <textarea class="input area"name="description" id="description" cols="30" rows="10" placeholder="Descripción..." required></textarea></textarea>
                 <p class="form-subtext">FICHA TÉCNICA</p>
                 <input class="input" type="text" name="location" id="location" placeholder="Locación del viñedo...">
@@ -44,13 +43,9 @@
                 <input class="input" type="number" name="avb" id="avb" placeholder="Graduación alcohólica...">
                 <input class="input" type="text" name="breeding" id="breeding" placeholder="Crianza...">
 
-                <figure class="product-detail-image-container">
-                    <input class="product-detail-image" type="file" name="imageProd" id="imageProd" >
-                </figure>    
-                    
-                
 
-                <button class="black-button" type="submit" value="enviar">CREAR PRODUCTO</button>
+
+                <button class="black-button edit" type="submit" value="enviar">CREAR PRODUCTO</button>
             </form>
         </div>
     </main>
