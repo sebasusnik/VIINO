@@ -44,6 +44,10 @@
                     <input class="input" type="text" name="name" id="name" placeholder="Nombre del vino/producto..." value="<%= product.name %>">
                 </label>
                 <label>
+                    <h3 class="label">Nombre reducido del vino/producto:</h3>
+                    <input class="input" type="text" name="shortname" id="shortname" placeholder="Nombre del vino/producto..." value="<%= product.shortname %>">
+                </label>
+                <label>
                     <h3 class="label">Bodega:</h3>
                     <input class="input" type="text" name="producer" id="producer" placeholder="Bodega producto" value="<%= product.producer %>">
                 </label>
@@ -93,7 +97,7 @@
                     <h3 class="label">Crianza:</h3>
                     <input class="input" type="text" name="breeding" id="breeding" placeholder="Crianza..." value="<%= product.breeding %>">
                 </label>
-                <button class="black-button edit" type="submit">MODIFICAR PRODUCTO</button>
+                <button class="black-button" type="submit">MODIFICAR PRODUCTO</button>
             </form>
         </div>
     </main>

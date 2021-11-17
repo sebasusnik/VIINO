@@ -590,7 +590,7 @@ svg:hover path {
     height: 50px;
     width: 100%;
     cursor: pointer;
-    margin-top: 8px;
+    margin-top: 40px;
 }
 
 
@@ -843,9 +843,6 @@ footer a {
     margin-bottom: 120px;
 }
 
-.edit {
-    margin-top: 60px;
-}
 
 .form-text {
     font-size: 14px;
