@@ -498,7 +498,7 @@ svg:hover path {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 14px;
     font-weight: 200;
-    margin: 20px 0px 6px;
+    margin: 20px 0px 50px;
 }
 
 .product-detail-quote {
@@ -589,7 +589,11 @@ svg:hover path {
     height: 50px;
     width: 100%;
     cursor: pointer;
-    margin-top: 40px;
+    margin-top: 32px;
+}
+
+.separation {
+    margin-top: 60px;
 }
 
 
