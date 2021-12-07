@@ -241,7 +241,7 @@ input::placeholder {
 .main-title-container {
     display:flex;
     margin-top: 34px;
-    margin-bottom: 34px;
+    margin-bottom: 42px;
     padding: 0px;
     justify-content: space-between;
     align-items: center;
@@ -822,10 +822,10 @@ footer a {
 }
 
 .login-signup-buttons > * {
-    display: block;
-    align-self: stretch;
     padding: 16px 0;
+    align-items: stretch;
     width: 100%;
+    margin: 0;
 }
 
 .button-white {
@@ -849,6 +849,19 @@ footer a {
     font-weight: 400;
     margin-bottom: 28px;
 }
+
+.danger {
+    color: red;
+    margin: 4px 4px 0;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    10%, 90% {transform: translate3d(-1px, 0, 0);}
+    20%, 80% {transform: translate3d(2px, 0, 0);}
+    30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
+    40%, 60% {transform: translate3d(4px, 0, 0);}
+};
 
 .form-subtext {
     font-size: 20px;
@@ -903,6 +916,12 @@ textarea {
     padding-left: 8px;
 }
 
+.form-subtext{
+    font-size: 14px;
+    font-weight: 400;
+    border-left: solid 1px black;
+    padding-left: 12px;
+}
 
 /* CART */
 

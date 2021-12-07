@@ -17,11 +17,46 @@
         <div class="form-container">
             <p class="form-text">Creá una cuenta en VIINO y obtené el beneficio de una experiencia de compra más personal y de un pago on-line más veloz.</p>
             <p class="form-subtext">Completar todos los campos es obligatorio</p>
-            <form action="resultadosRegister" method="POST">
-                <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre..." required>
-                <input class="input" type="text" name="apellido" id="apellido" placeholder="Apellido..." required>
-                <input class="input" type="email" name="email" id="email" placeholder="Correo electrónico..." required>
-                <input class="input" type="password" name="password" id="password" placeholder="Contraseña..." required>
+            <form method="POST" action="/user/register" enctype="multipart/form-data">
+                <input class="input" type="text" name="first_name" id="nombre" placeholder="Nombre..." value="<%= locals.oldData ? oldData.first_name : null %>">
+                <% if (locals.errors && errors.first_name) { %>
+                    <div class="form-text danger">
+                        <%= errors.first_name.msg %> 
+                    </div>
+                <% } %>
+
+                <input class="input" type="text" name="last_name" id="apellido" placeholder="Apellido..." value="<%= locals.oldData ? oldData.last_name : null %>" >
+                <% if (locals.errors && errors.last_name) { %>
+                    <div class="form-text danger">
+                        <%= errors.last_name.msg %> 
+                    </div>
+                <% } %>
+
+                <input class="input" type="text" name="email" id="email" placeholder="Correo electrónico..." value="<%= locals.oldData ? oldData.email : null %>">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="form-text danger">
+                        <%= errors.email.msg %> 
+                    </div>
+                <% } %>
+
+                <input class="input" type="password" name="password" id="password" placeholder="Contraseña...">
+                <% if (locals.errors && errors.password) { %>
+                    <div class="form-text danger">
+                        <%= errors.password.msg %> 
+                    </div>
+                <% } %>
+
+                <label for="imageUser" class="label">
+                    <h3 class="label">Subí una imagen de perfil:</h3>
+                    <input class="image-input" type="file" name="imageUser" id="imageUser" >
+                </label>
+                <% if (locals.errors && errors.imageUser) { %>
+                    <div class="form-text danger">
+                        <%= errors.imageUser.msg %> 
+                    </div>
+                <% } %>
+
+
                 <button class="black-button" type="submit" value="enviar">CREAR CUENTA</button>
             </form>
         </div>

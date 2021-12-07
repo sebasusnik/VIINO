@@ -15,7 +15,7 @@
             <!-- este action va al productRuoter -->
             
             <form method="POST" action="/products/<%= product.id %>?_method=PUT" enctype="multipart/form-data" class="form">     
-                <p class="form-subtext">DATOS PRINCIPALES</p>
+                <p class="form-title">DATOS PRINCIPALES</p>
                 <!-- AGREGO LA IMAGEN POR ACA (PROVISORIO)-->
                 <br>
                 <figure class="product-detail-image-container">
@@ -67,7 +67,7 @@
                     <h3 class="label">Descripción:</h3>
                     <textarea class="input area" name="description" id="description" cols="30" rows="10" placeholder="Descripción..." ><%= product.description %></textarea>
                 </label>
-                <p class="form-subtext">FICHA TÉCNICA</p>
+                <p class="form-title">FICHA TÉCNICA</p>
                 <label>
                     <h3 class="label">Locación del viñedo:</h3>
                     <input class="input" type="text" name="location" id="location" placeholder="Locación del viñedo..." value="<%= product.location %>">

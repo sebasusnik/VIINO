@@ -1,137 +1,137 @@
 [
-    {
-        "id": 1,
-        "first_name": "Elena",
-        "last_name": "Crespo",
-        "email": "elenacrespo@gmail.com",
-        "password": "Elena52",
-        "category": "user",
-        "image": "elena.jpg"
-    },
-    {
-        "id": 2,
-        "first_name": "Martín",
-        "last_name": "Crippa",
-        "email": "martincrippa@gmail.com",
-        "password": "Martin46",
-        "category": "user",
-        "image": "martin.jpg"
-    },
-    {
-        "id": 3,
-        "first_name": "Julia",
-        "last_name": "Frossi",
-        "email": "juliafrossi@gmail.com",
-        "password": "Julia65",
-        "category": "user",
-        "image": "julia.jpg"
-    },
-    {
-        "id": 4,
-        "first_name": "Santiago",
-        "last_name": "Landucci",
-        "email": "santiagolanducci@gmail.com",
-        "password": "Santiago23",
-        "category": "user",
-        "image": "santiago.jpg"
-    },
-    {
-        "id": 5,
-        "first_name": "Mirta",
-        "last_name": "Lanatti",
-        "email": "mirtalanatti@gmail.com",
-        "password": "Mirta78",
-        "category": "user",
-        "image": "mirta.jpg"
-    },
-    {
-        "id": 6,
-        "first_name": "Josefina",
-        "last_name": "Peirone",
-        "email": "josefinapeirone@gmail.com",
-        "password": "Josefina42",
-        "category": "user",
-        "image": "josefina.jpg"
-    },
-    {
-        "id": 7,
-        "first_name": "Pablo",
-        "last_name": "Ferri",
-        "email": "pabloferri@gmail.com",
-        "password": "Pablo48",
-        "category": "user",
-        "image": "pablo.jpg"
-    },
-    {
-        "id": 8,
-        "first_name": "Hernan",
-        "last_name": "Scandizzo",
-        "email": "hernanscandizzo@gmail.com",
-        "password": "Hernan32",
-        "category": "user",
-        "image": "hernan.jpg"
-    },
-    {
-        "id": 9,
-        "first_name": "Fernando",
-        "last_name": "Cabrera",
-        "email": "fernandocabrera@gmail.com",
-        "password": "Fernando52",
-        "category": "user",
-        "image": "fernando.jpg"
-    },
-    {
-        "id": 10,
-        "first_name": "Eugenia",
-        "last_name": "Camponucci",
-        "email": "eugeniacamponucci@gmail.com",
-        "password": "Eugenia20",
-        "category": "user",
-        "image": "eugenia.jpg"
-    },
-    {
-        "id": 11,
-        "first_name": "Sergio",
-        "last_name": "Serra",
-        "email": "sergioserra@gmail.com",
-        "password": "ThA19X1",
-        "category": "user",
-        "image": "sergio.jpg"
-    },
-    {
-        "id": 12,
-        "first_name": "Carolina",
-        "last_name": "Pisac",
-        "email": "carolinapisac@gmail.com",
-        "password": "Carolina62",
-        "category": "user",
-        "image": "carolina.jpg"
-    },
-    {
-        "id": 13,
-        "first_name": "Ramiro",
-        "last_name": "Perez",
-        "email": "ramiroperez@gmail.com",
-        "password": "Ramiro30",
-        "category": "user",
-        "image": "ramiro.jpg"
-    },
-    {
-        "id": 14,
-        "first_name": "Maite",
-        "last_name": "Fernández",
-        "email": "maitefernandez@gmail.com",
-        "password": "Maite26",
-        "category": "user",
-        "image": "maite.jpg"
-    },
-    {
-        "id": 15,
-        "first_name": "Sofía",
-        "last_name": "Geninatti",
-        "email": "sofiageninatti@gmail.com",
-        "password": "Sofia53",
-        "category": "user",
-        "image": "sofia.jpg"
-    }
+ {
+  "id": 1,
+  "first_name": "Elena",
+  "last_name": "Crespo",
+  "email": "elenacrespo@gmail.com",
+  "password": "Elena52",
+  "category": "user",
+  "image": "elena.jpg"
+ },
+ {
+  "id": 2,
+  "first_name": "Martín",
+  "last_name": "Crippa",
+  "email": "martincrippa@gmail.com",
+  "password": "Martin46",
+  "category": "user",
+  "image": "martin.jpg"
+ },
+ {
+  "id": 3,
+  "first_name": "Julia",
+  "last_name": "Frossi",
+  "email": "juliafrossi@gmail.com",
+  "password": "Julia65",
+  "category": "user",
+  "image": "julia.jpg"
+ },
+ {
+  "id": 4,
+  "first_name": "Santiago",
+  "last_name": "Landucci",
+  "email": "santiagolanducci@gmail.com",
+  "password": "Santiago23",
+  "category": "user",
+  "image": "santiago.jpg"
+ },
+ {
+  "id": 5,
+  "first_name": "Mirta",
+  "last_name": "Lanatti",
+  "email": "mirtalanatti@gmail.com",
+  "password": "Mirta78",
+  "category": "user",
+  "image": "mirta.jpg"
+ },
+ {
+  "id": 6,
+  "first_name": "Josefina",
+  "last_name": "Peirone",
+  "email": "josefinapeirone@gmail.com",
+  "password": "Josefina42",
+  "category": "user",
+  "image": "josefina.jpg"
+ },
+ {
+  "id": 7,
+  "first_name": "Pablo",
+  "last_name": "Ferri",
+  "email": "pabloferri@gmail.com",
+  "password": "Pablo48",
+  "category": "user",
+  "image": "pablo.jpg"
+ },
+ {
+  "id": 8,
+  "first_name": "Hernan",
+  "last_name": "Scandizzo",
+  "email": "hernanscandizzo@gmail.com",
+  "password": "Hernan32",
+  "category": "user",
+  "image": "hernan.jpg"
+ },
+ {
+  "id": 9,
+  "first_name": "Fernando",
+  "last_name": "Cabrera",
+  "email": "fernandocabrera@gmail.com",
+  "password": "Fernando52",
+  "category": "user",
+  "image": "fernando.jpg"
+ },
+ {
+  "id": 10,
+  "first_name": "Eugenia",
+  "last_name": "Camponucci",
+  "email": "eugeniacamponucci@gmail.com",
+  "password": "Eugenia20",
+  "category": "user",
+  "image": "eugenia.jpg"
+ },
+ {
+  "id": 11,
+  "first_name": "Sergio",
+  "last_name": "Serra",
+  "email": "sergioserra@gmail.com",
+  "password": "ThA19X1",
+  "category": "user",
+  "image": "sergio.jpg"
+ },
+ {
+  "id": 12,
+  "first_name": "Carolina",
+  "last_name": "Pisac",
+  "email": "carolinapisac@gmail.com",
+  "password": "Carolina62",
+  "category": "user",
+  "image": "carolina.jpg"
+ },
+ {
+  "id": 13,
+  "first_name": "Ramiro",
+  "last_name": "Perez",
+  "email": "ramiroperez@gmail.com",
+  "password": "Ramiro30",
+  "category": "user",
+  "image": "ramiro.jpg"
+ },
+ {
+  "id": 14,
+  "first_name": "Maite",
+  "last_name": "Fernández",
+  "email": "maitefernandez@gmail.com",
+  "password": "Maite26",
+  "category": "user",
+  "image": "maite.jpg"
+ },
+ {
+  "id": 15,
+  "first_name": "Sofía",
+  "last_name": "Geninatti",
+  "email": "sofiageninatti@gmail.com",
+  "password": "Sofia53",
+  "category": "user",
+  "image": "sofia.jpg"
+ }
 ]

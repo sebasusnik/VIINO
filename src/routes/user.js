@@ -1,10 +1,35 @@
 const express = require ("express");
 const router = express.Router();
 
-const userController = require ("../controllers/userController.js");
+// Controller
+const usersController = require ("../controllers/usersController.js");
 
-router.get("/register", userController.register);
-router.get("/login", userController.login);
-router.get("/", userController.perfil);
+// Middlewares
+const uploadFile = require('../middlewares/uploadUser')
+const validations = require('../middlewares/validateRegisterMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
+
+
+/*** USER ROUTES ***/
+
+// Register Form
+router.get('/register', guestMiddleware, usersController.register);
+
+// Register Process
+router.post('/register', uploadFile.single('imageUser'), validations, usersController.processRegister);
+
+// Login Form
+router.get('/login', guestMiddleware, usersController.login);
+
+// Procesar el login
+router.post('/login', usersController.loginProcess);
+
+// User Profile
+router.get('/profile/', authMiddleware, usersController.profile);
+
+// Logout
+router.get('/logout/', usersController.logout);
+
 
 module.exports= router;

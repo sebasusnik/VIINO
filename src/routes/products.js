@@ -1,29 +1,34 @@
 const express = require ("express");
 const router = express.Router();
-// para subir archivos necesitamos multer
-const upload = require('../middlewares/upload');
 
+// Controller
 const productsController = require ("../controllers/productsController.js");
 
+// Middlewares
+const uploadFile = require('../middlewares/uploadProd')
 
-/*** SHOP ***/
+
+/*** PRODUCT ROUTES ***/
+
+// Shop
 router.get("/", productsController.list);
 
-/*** CREATE PRODUCT FORM ***/
+// Create Product Form
 router.get ("/create", productsController.create);
-/*** CREATE PRODUCT ***/
-router.post ("/",upload.single("imageProd"), productsController.create);
 
-/*** GET ONE PRODUCT (DETAIL) ***/
+// Create Product Process
+router.post ("/", uploadFile.single("imageProd"), productsController.create);
+
+// Product Detail
 router.get('/:id', productsController.detail);
 
-/*** EDIT PRODUCT FORM ***/
+// Edit Product Form
 router.get('/:id/edit', productsController.edit);
 
-/*** EDIT PRODUCT ***/
-router.put('/:id', upload.single('imageProd'), productsController.update);
+// Update Product
+router.put('/:id', uploadFile.single('imageProd'), productsController.update);
 
-/*** DELETE PRODUCT ***/
+// Delete Product
 router.delete ('/:id', productsController.destroy);
 
 

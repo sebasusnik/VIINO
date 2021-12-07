@@ -17,9 +17,19 @@
         </div>   
         <section class="form-container">
             <p class="form-text">Iniciá sesión en VIINO con tu correo electrónico y contraseña</p>
-            <form action="resultadosLogin" method="POST">
-                <input class="input" type="email" name="email" id="email" placeholder="Correo electrónico...">
+            <form action="/user/login" method="POST">
+                <input class="input" type="text" name="email" id="email" placeholder="Correo electrónico..." value="<%= locals.oldData ? oldData.email : null %>">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="form-text danger">
+                        <%= errors.email.msg %>
+                    </div>
+                <% } %>
                 <input class="input" type="password" name="password" id="password" placeholder="Contraseña...">
+                <% if (locals.errors && errors.password) { %>
+                    <div class="form-text danger">
+                        <%= errors.password.msg %>
+                    </div>
+                <% } %>
                 <a class="form-text forgot-password">¿Olvidaste tu contraseña?</a>
                 <button class= "black-button"type="submit" value="enviar">INGRESAR</button>
             </form>

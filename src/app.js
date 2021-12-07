@@ -4,27 +4,40 @@ const mainRouter = require ("./routes/main");
 const productsRouter = require ("./routes/products");
 const userRouter = require ("./routes/user");
 const path = require('path')
-const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const cookies = require('cookie-parser');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
-/*Para enviar peticiones por POST es necesario tener un formulario
-desde el que se enviaran los datos. Hay que configurar el entorno de 
-nuestra aplicación para que sea capaz de capturar esa información
-con estas dos lineas PUSE ESTO COMO RECORDATORIO BORRARLO DESPUES*/
+
+// Sessions
+app.use(session({
+	secret: "Shhh, It's a secret",
+	resave: false,
+	saveUninitialized: false,
+}));
+
+// Cookies
+app.use(cookies());
+
+// HTML forms encoded
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-/*los formularios de HTML no soportan los métodos PUT y DELETE 
-Hay que configurar app.js para poder sobreescribir el método original e implementarlos 
-PUSE ESTO COMO RECORDATORIO BORRARLO DESPUES*/
+// PUT and DELETE method override
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
-
+// Statics
 app.use(express.static(path.join(__dirname, '../public')));
+// Template Engine
 app.set ("view engine", "ejs");
+// Views
 app.set('views', path.join(__dirname, '/views'));
 
+// Keep User Logged
+app.use(userLoggedMiddleware);
 
+// Routes
 app.use ("/", mainRouter);
 app.use ("/products", productsRouter);
 app.use ("/user", userRouter);
