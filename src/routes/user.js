@@ -26,10 +26,10 @@ router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', usersController.loginProcess);
 
 // User Profile
-router.get('/profile/', authMiddleware, usersController.profile);
+router.get('/profile', authMiddleware, usersController.profile);
 
 // Logout
-router.get('/logout/', usersController.logout);
+router.get('/logout', usersController.logout);
 
 
 module.exports= router;
