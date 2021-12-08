@@ -46,9 +46,9 @@
                     </div>
                 <% } %>
 
-                <label for="imageUser" class="label">
+                <label for="image" class="label">
                     <h3 class="label">Subí una imagen de perfil:</h3>
-                    <input class="image-input" type="file" name="imageUser" id="imageUser" >
+                    <input class="image-input" type="file" name="image" id="image" >
                 </label>
                 <% if (locals.errors && errors.imageUser) { %>
                     <div class="form-text danger">
@@ -57,7 +57,7 @@
                 <% } %>
 
 
-                <button class="black-button" type="submit" value="enviar">CREAR CUENTA</button>
+                <button class="black-button separation" type="submit" value="enviar">CREAR CUENTA</button>
             </form>
         </div>
     </main>

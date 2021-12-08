@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head',{subtitle:'cart'}) %>
+
+<body>
+    <%- include('../partials/header')%>
+
+    <main>
+        <div class="main-title-container">
+            <a value="Go back!" onclick="history.back()" class="back-arrow"><img src="/img/icon/arrow.svg" alt=""></a>
+            <h1 class="main-title">TU CUENTA</h1>
+        </div>
+
+        <figure class="product-detail-image-container">
+            <img class="product-detail-image" src="/img/users-img/<%= locals.userLogged.image %>" alt="Imagen de perfil">
+        </figure>
+
+        <section class="form-container">
+            <p class="form-text">Este es tu perfil de usuario</p>
+
+        </section>
+    </main>
+
+    <%- include('../partials/footer')%>
+
+    
+</body>
+</html>

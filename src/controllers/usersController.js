@@ -38,7 +38,7 @@ const userController =
 		let userToCreate = {
 			...req.body,
 			password: bcryptjs.hashSync(req.body.password, 10),
-			avatar: req.file.filename
+			image: req.file.filename
 		}
 
 		let userCreated = User.create(userToCreate);
@@ -76,20 +76,20 @@ const userController =
 		return res.render('user/login', {
 			errors: {
 				email: {
-					msg: 'No se encuentra este email en nuestra base de datos'
+					msg: 'Este email no se encuentra registrado'
 				}
 			}
 		});
 	},
 
 	profile: (req, res) => {
-		return res.render('userProfile', {
+		return res.render('user/profile', {
 			user: req.session.userLogged
 		});
 	},
 
 	logout: (req, res) => {
-		res.clearCookie('userEmail');
+		res.clearCookie('main/index');
 		req.session.destroy();
 		return res.redirect('/');
 	}

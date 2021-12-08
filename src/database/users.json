@@ -133,5 +133,13 @@
   "password": "Sofia53",
   "category": "user",
   "image": "sofia.jpg"
+ },
+ {
+  "id": 16,
+  "first_name": "Sebastián",
+  "last_name": "Sušnik",
+  "email": "sebasusnik@gmail.com",
+  "password": "$2a$10$GEizl9SpSgwupe4FOgUKEOcHuvs4YQMgjLDCDJv74AacSzkm4LYO6",
+  "image": "user-1638978911202.jpeg"
  }
 ]
