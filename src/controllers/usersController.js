@@ -16,7 +16,7 @@ const userController =
 
 		if (resultValidation.errors.length > 0) {
 			return res.render('user/register', {
-				errors: resultValidation.mapped(),
+				errors: resultValidation.mapped(), // Si el usuario quiere registarse, pero no cumple con los requisitos de registración, los mismos son informados
 				oldData: req.body
 			});
 		}
@@ -28,7 +28,7 @@ const userController =
 			return res.render('user/register', {
 				errors: {
 					email: {
-						msg: 'Este email ya está registrado'
+						msg: 'Este email ya está registrado' // Si el usuario quiere registarse, pero ya lo hizo, se le informa que no debe registrarse nuevamente
 					}
 				},
 				oldData: req.body
@@ -36,13 +36,13 @@ const userController =
 		}
 
 		let userToCreate = {
-			...req.body,
+			...req.body, // Reutilizamos todas las props que vienen en el body con el spread operator
 			password: bcryptjs.hashSync(req.body.password, 10),
-			image: req.file.filename,
+            image: req.file ? req.file.filename : "generic.png ", //si no viene una imagen cargo una genérica
 			category: "user",
 		}
 
-		let userCreated = User.create(userToCreate);
+		let userCreated = User.create(userToCreate); // Si completa correctamente el formulario, el usuario es ingresado a la basa de datos
 
 		return res.redirect('/user/login');
 	},
